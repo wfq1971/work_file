@@ -1,0 +1,79 @@
+;
+; KONICA MINOLTA C554SeriesPS Driver UNF-File for Win x64
+;
+; Copyright (C) 2003 KONICA MINOLTA, INC.
+
+[Version]
+Signature="$Windows NT$"
+Provider=%KM%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile.ntamd64=KOAYTA__.CAT
+DriverVer=04/07/2014,5.1.2.0
+
+[DriverInfo]
+DriverName1=KONICA MINOLTA C554SeriesPS
+DriverName2=KONICA MINOLTA C364SeriesPS
+DriverCode=0804
+
+[Uninstall.DriverName1]
+DelReg=Environment_Reg.DriverName1
+DelFiles=PPD,G_FILES,PRINT_PROCESSOR,PRINT_MONITOR
+
+[Uninstall.DriverName2]
+DelReg=Environment_Reg.DriverName2
+DelFiles=PPD,G_FILES,PRINT_PROCESSOR,PRINT_MONITOR
+
+[Environment_Reg.DriverName1]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA C554SeriesPS"
+
+[Environment_Reg.DriverName2]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA C364SeriesPS"
+
+[PPD]
+KOAYTA__.PPD
+
+[G_FILES]
+KOAYTA_B.DLL,,,1
+KOAYTA_C.DLL,,,1
+KOAYTA_D.DLL,,,1
+KOAYTA_E.DLL,,,1
+KOAYTA_G.DLL,,,1
+KOAYTA_M.DLL,,,1
+KOAYTA_N.DLL,,,1
+KOAYTA_O.DLL,,,1
+KOAYTA_R.DLL,,,1
+KOAYTA_S.DLL,,,1
+KOAYTA_U.DLL,,,1
+KOAYTA_W.DLL,,,1
+KOAYTA_C.KPD
+KOAYTA_D.KPD
+KOAYTA_M.KPD
+KOAYTA__.KPD
+KOAYTA__.INI
+KOAYTA__.CHM,,,1
+KOAYTA__.UNF
+KOAYTA_A.KMP
+KOAYTA_B.KMP
+KOAYTA_C.KMP
+KOAYTA_D.KMP
+KOAYTA_E.KMP
+KOAYTA_F.KMP
+KOAYTA_G.KMP
+
+[PRINT_PROCESSOR]
+KOAYTA_P.DLL
+
+[PRINT_MONITOR]
+KOAYTA_L.DLL,,,1
+
+[DestinationDirs]
+DefaultDestDir=66000
+PRINT_PROCESSOR=66001
+PRINT_MONITOR=66002
+
+[Strings]
+KM="KONICA MINOLTA"
+DiskName="KONICA MINOLTA C554Series Driver Disk"
