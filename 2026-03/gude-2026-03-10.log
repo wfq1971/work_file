@@ -1,4 +1,0 @@
-15:47:49:615 [CRITICAL]	SharedConnection - Failed to open WinHTTP Session. 操作成功完成。
-, last error code = 0 
-15:47:49:617 [ERROR]	Failed to Configure Secure Protocols. 操作成功完成。
-, last error code = 0 
