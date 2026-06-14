@@ -1,0 +1,3438 @@
+DATA_BLOCK "AI_R"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   PV001 : REAL ;	//1#助燃风机出口蝶阀反馈
+   PV002 : REAL ;	//2#助燃风机出口蝶阀反馈
+   PV003 : REAL ;	//烟道闸阀反馈
+   AT001 : REAL ;	//残氧分析仪
+   TT116 : REAL ;	//钢坯红外检测
+   FT101 : REAL ;	//净环水来水总管流量
+   M01_C : REAL ;	//1#助燃风机电流
+   M02_C : REAL ;	//2#助燃风机电流
+   PT013 : REAL ;	//炉膛压力
+   PT014 : REAL ;	//煤气总管压力阀后
+   PT015 : REAL ;	//换热器前冷空气压力
+   PT016 : REAL ;	//换热器后空气压力
+   PT019 : REAL ;	//净换水来水总管压力
+   PT020 : REAL ;	//净环水回水总管压力
+   PT021 : REAL ;	//浊环水来水总管压力
+   PT014_2 : REAL ;	//煤气总管压力阀前
+   FV001 : REAL ;	//均热段上左煤气调节阀阀位反馈
+   FV002 : REAL ;	//均热段上右煤气调节阀阀位反馈
+   FV003 : REAL ;	//均热段下左煤气调节阀阀位反馈
+   FV004 : REAL ;	//均热段下右煤气调节阀阀位反馈
+   FV005 : REAL ;	//加热段上煤气调节阀阀位反馈
+   FV006 : REAL ;	//加热段上煤气调节阀阀位反馈
+   FV007 : REAL ;	//均热段上左空气调节阀阀位反馈
+   FV008 : REAL ;	//均热段上右空气调节阀阀位反馈
+   FV009 : REAL ;	//均热段下左空气调节阀阀位反馈
+   FV010 : REAL ;	//均热段下右空气调节阀阀位反馈
+   FV011 : REAL ;	//加热段上空气调节阀阀位反馈
+   FV012 : REAL ;	//加热段上空气调节阀阀位反馈
+   FT001 : REAL ;	//均热段上左煤气流量
+   FT002 : REAL ;	//均热段上右煤气流量
+   FT003 : REAL ;	//均热段下左煤气流量
+   FT004 : REAL ;	//均热段下右煤气流量
+   FT005 : REAL ;	//加热段上煤气流量
+   FT006 : REAL ;	//加热段下煤气流量
+   FT007 : REAL ;	//均热段上左空气流量
+   FT008 : REAL ;	//均热段上右空气流量
+   FT009 : REAL ;	//均热段下左空气流量
+   FT010 : REAL ;	//均热段下右空气流量
+   FT011 : REAL ;	//加热段上空气流量
+   FT012 : REAL ;	//加热段下空气流量
+   PT001 : REAL ;	//均热段上左煤气压力
+   PT002 : REAL ;	//均热段上右煤气压力
+   PT003 : REAL ;	//均热段下左煤气压力
+   PT004 : REAL ;	//均热段下右煤气压力
+   PT005 : REAL ;	//加热段上煤气压力
+   PT006 : REAL ;	//加热段上煤气压力
+   PT007 : REAL ;	//均热段上左空气压力
+   PT008 : REAL ;	//均热段上右空气压力
+   PT009 : REAL ;	//均热段下左空气压力
+   PT010 : REAL ;	//均热段下右空气压力
+   PT011 : REAL ;	//加热段上空气压力
+   PT012 : REAL ;	//加热段上空气压力
+   PT017 : REAL ;	//氮气总管压力
+   PT018 : REAL ;	//压缩空气压力
+   PV016 : REAL ;	//煤气总管调节阀阀位反馈
+   FT013 : REAL ;	//新增加热段上空气流量
+   FT014 : REAL ;	//新增加热段上煤气流量
+   FV013 : REAL ;	//新增加热段上空气调节阀阀位反馈
+   FV014 : REAL ;	//新增加热段上煤气调节阀阀位反馈
+   PT013_2 : REAL ;	//新增加热段上空气压力
+   PT015_2 : REAL ;	//新增加热段上煤气压力
+   FT019 : REAL ;	//新增5
+   FT020 : REAL ;	//新增6
+  END_STRUCT ;	
+BEGIN
+   PV001 := 0.000000e+000; 
+   PV002 := 0.000000e+000; 
+   PV003 := 0.000000e+000; 
+   AT001 := 0.000000e+000; 
+   TT116 := 0.000000e+000; 
+   FT101 := 0.000000e+000; 
+   M01_C := 0.000000e+000; 
+   M02_C := 0.000000e+000; 
+   PT013 := 0.000000e+000; 
+   PT014 := 0.000000e+000; 
+   PT015 := 0.000000e+000; 
+   PT016 := -1.896296e+001; 
+   PT019 := 0.000000e+000; 
+   PT020 := 0.000000e+000; 
+   PT021 := 0.000000e+000; 
+   PT014_2 := 0.000000e+000; 
+   FV001 := 0.000000e+000; 
+   FV002 := 0.000000e+000; 
+   FV003 := 0.000000e+000; 
+   FV004 := 0.000000e+000; 
+   FV005 := 0.000000e+000; 
+   FV006 := 0.000000e+000; 
+   FV007 := 0.000000e+000; 
+   FV008 := 0.000000e+000; 
+   FV009 := 0.000000e+000; 
+   FV010 := 0.000000e+000; 
+   FV011 := 0.000000e+000; 
+   FV012 := 0.000000e+000; 
+   FT001 := 0.000000e+000; 
+   FT002 := 0.000000e+000; 
+   FT003 := 0.000000e+000; 
+   FT004 := 0.000000e+000; 
+   FT005 := 0.000000e+000; 
+   FT006 := 0.000000e+000; 
+   FT007 := 0.000000e+000; 
+   FT008 := 0.000000e+000; 
+   FT009 := 0.000000e+000; 
+   FT010 := 0.000000e+000; 
+   FT011 := 0.000000e+000; 
+   FT012 := 0.000000e+000; 
+   PT001 := 0.000000e+000; 
+   PT002 := 0.000000e+000; 
+   PT003 := 0.000000e+000; 
+   PT004 := 0.000000e+000; 
+   PT005 := 0.000000e+000; 
+   PT006 := 0.000000e+000; 
+   PT007 := 0.000000e+000; 
+   PT008 := 0.000000e+000; 
+   PT009 := 0.000000e+000; 
+   PT010 := 0.000000e+000; 
+   PT011 := 0.000000e+000; 
+   PT012 := 0.000000e+000; 
+   PT017 := 0.000000e+000; 
+   PT018 := 0.000000e+000; 
+   PV016 := 0.000000e+000; 
+   FT013 := 0.000000e+000; 
+   FT014 := 0.000000e+000; 
+   FV013 := 0.000000e+000; 
+   FV014 := 0.000000e+000; 
+   PT013_2 := 0.000000e+000; 
+   PT015_2 := 0.000000e+000; 
+   FT019 := 0.000000e+000; 
+   FT020 := 0.000000e+000; 
+END_DATA_BLOCK
+
+DATA_BLOCK "AI_I"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   PV001 : INT ;	//1#助燃风机出口蝶阀反馈
+   PV002 : INT ;	//2#助燃风机出口蝶阀反馈
+   PV003 : INT ;	//烟道闸阀反馈
+   AT001 : INT ;	//残氧分析仪
+   TT116 : INT ;	//钢坯红外检测
+   FT101 : INT ;	//净环水来水总管流量
+   M01_C : INT ;	//1#助燃风机电流
+   M02_C : INT ;	//2#助燃风机电流
+   PT013 : INT ;	//炉膛压力
+   PT014 : INT ;	//煤气总管压力
+   PT015 : INT ;	//换热器前冷空气压力
+   PT016 : INT ;	//换热器后空气压力
+   PT019 : INT ;	//净换水来水总管压力
+   PT020 : INT ;	//净环水回水总管压力
+   PT021 : INT ;	//浊环水来水总管压力
+   PT014_2 : INT ;	//煤气总管压力阀前
+   FV001 : INT ;	//均热段上左煤气调节阀阀位反馈
+   FV002 : INT ;	//均热段上右煤气调节阀阀位反馈
+   FV003 : INT ;	//均热段下左煤气调节阀阀位反馈
+   FV004 : INT ;	//均热段下右煤气调节阀阀位反馈
+   FV005 : INT ;	//加热段上煤气调节阀阀位反馈
+   FV006 : INT ;	//加热段上煤气调节阀阀位反馈
+   FV007 : INT ;	//均热段上左空气调节阀阀位反馈
+   FV008 : INT ;	//均热段上右空气调节阀阀位反馈
+   FV009 : INT ;	//均热段下左空气调节阀阀位反馈
+   FV010 : INT ;	//均热段下右空气调节阀阀位反馈
+   FV011 : INT ;	//加热段上空气调节阀阀位反馈
+   FV012 : INT ;	//加热段上空气调节阀阀位反馈
+   FT001 : INT ;	//均热段上左煤气流量
+   FT002 : INT ;	//均热段上右煤气流量
+   FT003 : INT ;	//均热段下左煤气流量
+   FT004 : INT ;	//均热段下右煤气流量
+   FT005 : INT ;	//加热段上煤气流量
+   FT006 : INT ;	//加热段上煤气流量
+   FT007 : INT ;	//均热段上左空气流量
+   FT008 : INT ;	//均热段上右空气流量
+   FT009 : INT ;	//均热段下左空气流量
+   FT010 : INT ;	//均热段下右空气流量
+   FT011 : INT ;	//加热段上空气流量
+   FT012 : INT ;	//加热段上空气流量
+   PT001 : INT ;	//均热段上左煤气压力
+   PT002 : INT ;	//均热段上右煤气压力
+   PT003 : INT ;	//均热段下左煤气压力
+   PT004 : INT ;	//均热段下右煤气压力
+   PT005 : INT ;	//加热段上煤气压力
+   PT006 : INT ;	//加热段上煤气压力
+   PT007 : INT ;	//均热段上左空气压力
+   PT008 : INT ;	//均热段上右空气压力
+   PT009 : INT ;	//均热段下左空气压力
+   PT010 : INT ;	//均热段下右空气压力
+   PT011 : INT ;	//加热段上空气压力
+   PT012 : INT ;	//加热段上空气压力
+   PT017 : INT ;	//氮气总管压力
+   PT018 : INT ;	//压缩空气压力
+   PV016 : INT ;	//煤气总管压力调节阀阀位反馈
+   FT013 : INT ;	//新增加热段上空气流量
+   FT014 : INT ;	//新增加热段上煤气流量
+   FV013 : INT ;	//新增加热段上空气调节阀阀位反馈
+   FV014 : INT ;	//新增加热段上煤气调节阀阀位反馈
+   PT013_2 : INT ;	//新增上加热段空气管道压力
+   PT015_2 : INT ;	//新增上加热段煤气管道压力
+   FT019 : INT ;	//新增5
+   FT020 : INT ;	//新增6
+  END_STRUCT ;	
+BEGIN
+   PV001 := 0; 
+   PV002 := 0; 
+   PV003 := 0; 
+   AT001 := 0; 
+   TT116 := 0; 
+   FT101 := 0; 
+   M01_C := 0; 
+   M02_C := 0; 
+   PT013 := 0; 
+   PT014 := 0; 
+   PT015 := 0; 
+   PT016 := 0; 
+   PT019 := 0; 
+   PT020 := 0; 
+   PT021 := 0; 
+   PT014_2 := 0; 
+   FV001 := 0; 
+   FV002 := 0; 
+   FV003 := 0; 
+   FV004 := 0; 
+   FV005 := 0; 
+   FV006 := 0; 
+   FV007 := 0; 
+   FV008 := 0; 
+   FV009 := 0; 
+   FV010 := 0; 
+   FV011 := 0; 
+   FV012 := 0; 
+   FT001 := 0; 
+   FT002 := 0; 
+   FT003 := 0; 
+   FT004 := 0; 
+   FT005 := 0; 
+   FT006 := 0; 
+   FT007 := 0; 
+   FT008 := 0; 
+   FT009 := 0; 
+   FT010 := 0; 
+   FT011 := 0; 
+   FT012 := 0; 
+   PT001 := 0; 
+   PT002 := 0; 
+   PT003 := 0; 
+   PT004 := 0; 
+   PT005 := 0; 
+   PT006 := 0; 
+   PT007 := 0; 
+   PT008 := 0; 
+   PT009 := 0; 
+   PT010 := 0; 
+   PT011 := 0; 
+   PT012 := 0; 
+   PT017 := 0; 
+   PT018 := 0; 
+   PV016 := 0; 
+   FT013 := 0; 
+   FT014 := 0; 
+   FV013 := 0; 
+   FV014 := 0; 
+   PT013_2 := 0; 
+   PT015_2 := 0; 
+   FT019 := 0; 
+   FT020 := 0; 
+END_DATA_BLOCK
+
+DATA_BLOCK "AO_I"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   PV001 : INT ;	//1#助燃风机出口调节阀输出
+   PV002 : INT ;	//2#助燃风机出口调节阀输出
+   PV003 : INT ;	//烟道调节阀输出
+   Screen : INT ;	//大屏幕输出
+   FV001 : INT ;	//均热段上左煤气调节阀输出
+   FV002 : INT ;	//均热段上右煤气调节阀输出
+   FV003 : INT ;	//均热段下左煤气调节阀输出
+   FV004 : INT ;	//均热段下右煤气调节阀输出
+   FV005 : INT ;	//加热段上煤气调节阀输出
+   FV006 : INT ;	//加热段上煤气调节阀输出
+   FV007 : INT ;	//均热段上左空气调节阀输出
+   FV008 : INT ;	//均热段上右空气调节阀输出
+   FV009 : INT ;	//均热段下左空气调节阀输出
+   FV0010 : INT ;	//均热段下右空气调节阀输出
+   FV0011 : INT ;	//加热段上空气调节阀阀输出
+   FV0012 : INT ;	//加热段上空气调节阀阀输出
+   fv0013 : INT ;	//新增加热段上空气调节阀输出
+   fv0014 : INT ;	//新增加热段上煤气调节阀输出
+   fv0015 : INT ;	//新增1
+   fv0016 : INT ;	//新增2
+  END_STRUCT ;	
+BEGIN
+   PV001 := 0; 
+   PV002 := 0; 
+   PV003 := 0; 
+   Screen := 0; 
+   FV001 := 0; 
+   FV002 := 0; 
+   FV003 := 0; 
+   FV004 := 0; 
+   FV005 := 0; 
+   FV006 := 0; 
+   FV007 := 0; 
+   FV008 := 0; 
+   FV009 := 0; 
+   FV0010 := 0; 
+   FV0011 := 0; 
+   FV0012 := 0; 
+   fv0013 := 0; 
+   fv0014 := 0; 
+   fv0015 := 0; 
+   fv0016 := 0; 
+END_DATA_BLOCK
+
+DATA_BLOCK "TE_R"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   TE001 : REAL ;	//预热段1#温度
+   TE002 : REAL ;	//预热段2#温度
+   TE003 : REAL ;	//加热段炉顶1#温度
+   TE004 : REAL ;	//加热段炉顶2#温度
+   TE005 : REAL ;	//加热段炉顶3#温度
+   TE006 : REAL ;	//加热段右侧温度
+   TE007 : REAL ;	//加热段左侧温度
+   TE008 : REAL ;	//均热段炉顶1#温度
+   TE009 : REAL ;	//均热段炉顶2#温度
+   TE010 : REAL ;	//均热段炉顶3#温度
+   TE011 : REAL ;	//均热段右侧温度
+   TE012 : REAL ;	//均热段左侧温度
+   TE013 : REAL ;	//空气换热器前烟气温度
+   TE014 : REAL ;	//空气换热器后烟气温度
+   TE015 : REAL ;	//净环水总管温度
+   TE016 : REAL ;	//1#助燃风机冷却水温度
+   TE017 : REAL ;	//2#助燃风机冷却水温度
+   TE018 : REAL ;	//推钢机1#冷却水温度
+   TE019 : REAL ;	//推钢机2#冷却水温度
+   TE020 : REAL ;	//推钢机3#冷却水温度
+   TE021 : REAL ;	//推钢机4#冷却水温度
+   TE022 : REAL ;	//装料端辊道1#冷却水温度
+   TE023 : REAL ;	//装料端辊道2#冷却水温度
+   TE024 : REAL ;	//装料端辊道3#冷却水温度
+   TE025 : REAL ;	//装料端辊道4#冷却水温度
+   TE026 : REAL ;	//装料端辊道5#冷却水温度
+   TE027 : REAL ;	//装料端辊道6#冷却水温度
+   TE028 : REAL ;	//装料端辊道7#冷却水温度
+   TE029 : REAL ;	//装料端辊道8#冷却水温度
+   TE030 : REAL ;	//出料端辊道1#冷却水温度
+   TE031 : REAL ;	//出料端辊道2#冷却水温度
+   TE032 : REAL ;	//出料端辊道3#冷却水温度
+   TE033 : REAL ;	//出料端辊道4#冷却水温度
+   TE034 : REAL ;	//出料端辊道5#冷却水温度
+   TE035 : REAL ;	//出料端辊道6#冷却水温度
+   TE036 : REAL ;	//出料端辊道7#冷却水温度
+   TE037 : REAL ;	//出料端辊道8#冷却水温度
+   TE038 : REAL ;	//出料端辊道9#冷却水温度
+   TE039 : REAL ;	//1#步进梁1#冷却水温度
+   TE040 : REAL ;	//1#步进梁2#冷却水温度
+   TE041 : REAL ;	//2#步进梁1#冷却水温度
+   TE042 : REAL ;	//2#步进梁2#冷却水温度
+   TE043 : REAL ;	//3#步进梁1#冷却水温度
+   TE044 : REAL ;	//3#步进梁2#冷却水温度
+   TE045 : REAL ;	//4#步进梁1#冷却水温度
+   TE046 : REAL ;	//4#步进梁2#冷却水温度
+   TE047 : REAL ;	//5#步进梁1#冷却水温度
+   TE048 : REAL ;	//5#步进梁2#冷却水温度
+   TE049 : REAL ;	//6#步进梁1#冷却水温度
+   TE050 : REAL ;	//6#步进梁2#冷却水温度
+   TE051 : REAL ;	//7#步进梁1#冷却水温度
+   TE052 : REAL ;	//7#步进梁2#冷却水温度
+   TE053 : REAL ;	//8#步进梁1#冷却水温度
+   TE054 : REAL ;	//8#步进梁2#冷却水温度
+   TE055 : REAL ;	//9#步进梁1#冷却水温度
+   TE056 : REAL ;	//9#步进梁2#冷却水温度
+   TE057 : REAL ;	//装料端摄像头冷却水温度
+   TE058 : REAL ;	//缓冲挡板冷却水温度
+   TE059 : REAL ;	//出料炉门摄像头冷却水温度
+   TE060 : REAL ;	//出料端部高温摄像头冷却水温度
+   TE061 : REAL ;	
+   TE062 : REAL ;	
+   TE063 : REAL ;	
+   TE064 : REAL ;	
+   TE065 : REAL ;	//热空气温度
+   TE066 : REAL ;	//自由辊冷却水温度
+   TE067 : REAL ;	//自由辊冷却水温度
+   spare1 : REAL ;	
+   spare12 : REAL ;	
+   TE070 : REAL ;	//2#助燃风机定子温度一
+   TE071 : REAL ;	//2#助燃风机定子温度二
+   TE072 : REAL ;	//2#助燃风机定子温度三
+   TE073 : REAL ;	//2#助燃风机定子温度四
+   TE074 : REAL ;	//1#助燃风机定子温度一
+   TE075 : REAL ;	//1#助燃风机定子温度二
+   TE076 : REAL ;	//1#助燃风机定子温度三
+   TE077 : REAL ;	//1#助燃风机定子温度四
+   TE078 : REAL ;	//1#助燃风机轴承温度一
+   TE079 : REAL ;	//1#助燃风机轴承温度二
+   TE080 : REAL ;	//2#助燃风机轴承温度一
+   TE081 : REAL ;	//2#助燃风机轴承温度二
+  END_STRUCT ;	
+BEGIN
+   TE001 := 0.000000e+000; 
+   TE002 := 0.000000e+000; 
+   TE003 := 0.000000e+000; 
+   TE004 := 0.000000e+000; 
+   TE005 := 0.000000e+000; 
+   TE006 := 0.000000e+000; 
+   TE007 := 0.000000e+000; 
+   TE008 := 0.000000e+000; 
+   TE009 := 0.000000e+000; 
+   TE010 := 0.000000e+000; 
+   TE011 := 0.000000e+000; 
+   TE012 := 0.000000e+000; 
+   TE013 := 0.000000e+000; 
+   TE014 := 0.000000e+000; 
+   TE015 := 0.000000e+000; 
+   TE016 := 0.000000e+000; 
+   TE017 := 0.000000e+000; 
+   TE018 := 0.000000e+000; 
+   TE019 := 0.000000e+000; 
+   TE020 := 0.000000e+000; 
+   TE021 := 0.000000e+000; 
+   TE022 := 0.000000e+000; 
+   TE023 := 0.000000e+000; 
+   TE024 := 0.000000e+000; 
+   TE025 := 0.000000e+000; 
+   TE026 := 0.000000e+000; 
+   TE027 := 0.000000e+000; 
+   TE028 := 0.000000e+000; 
+   TE029 := 0.000000e+000; 
+   TE030 := 0.000000e+000; 
+   TE031 := 0.000000e+000; 
+   TE032 := 0.000000e+000; 
+   TE033 := 0.000000e+000; 
+   TE034 := 0.000000e+000; 
+   TE035 := 0.000000e+000; 
+   TE036 := 0.000000e+000; 
+   TE037 := 0.000000e+000; 
+   TE038 := 0.000000e+000; 
+   TE039 := 0.000000e+000; 
+   TE040 := 0.000000e+000; 
+   TE041 := 0.000000e+000; 
+   TE042 := 0.000000e+000; 
+   TE043 := 0.000000e+000; 
+   TE044 := 0.000000e+000; 
+   TE045 := 0.000000e+000; 
+   TE046 := 0.000000e+000; 
+   TE047 := 0.000000e+000; 
+   TE048 := 0.000000e+000; 
+   TE049 := 0.000000e+000; 
+   TE050 := 0.000000e+000; 
+   TE051 := 0.000000e+000; 
+   TE052 := 0.000000e+000; 
+   TE053 := 0.000000e+000; 
+   TE054 := 0.000000e+000; 
+   TE055 := 0.000000e+000; 
+   TE056 := 0.000000e+000; 
+   TE057 := 0.000000e+000; 
+   TE058 := 0.000000e+000; 
+   TE059 := 0.000000e+000; 
+   TE060 := 0.000000e+000; 
+   TE061 := 0.000000e+000; 
+   TE062 := 0.000000e+000; 
+   TE063 := 0.000000e+000; 
+   TE064 := 0.000000e+000; 
+   TE065 := 0.000000e+000; 
+   TE066 := 0.000000e+000; 
+   TE067 := 0.000000e+000; 
+   spare1 := 0.000000e+000; 
+   spare12 := 0.000000e+000; 
+   TE070 := 0.000000e+000; 
+   TE071 := 0.000000e+000; 
+   TE072 := 0.000000e+000; 
+   TE073 := 0.000000e+000; 
+   TE074 := 0.000000e+000; 
+   TE075 := 0.000000e+000; 
+   TE076 := 0.000000e+000; 
+   TE077 := 0.000000e+000; 
+   TE078 := 0.000000e+000; 
+   TE079 := 0.000000e+000; 
+   TE080 := 0.000000e+000; 
+   TE081 := 0.000000e+000; 
+END_DATA_BLOCK
+
+DATA_BLOCK "DB_流量累计"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   ONS_1S : BOOL ;	
+   ONS_1H : BOOL ;	
+   ONS_1D : BOOL ;	
+   ONS_1M : BOOL ;	
+   CLR : BOOL ;	
+   JRSMQ : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+   JRXMQ : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+   JRZSMQ : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+   JRZXMQ : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+   JRYSMQ : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+   JRYXMQ : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+   MQZ : REAL ;	
+   MQZLL : REAL ;	
+   jrsmq_2 : STRUCT 	
+    CLR : BOOL ;	
+    SPARE : BOOL ;	
+    SPARE2 : BOOL ;	
+    SPARE3 : BOOL ;	
+    Flow : REAL ;	
+   END_STRUCT ;	
+  END_STRUCT ;	
+BEGIN
+   ONS_1S := FALSE; 
+   ONS_1H := FALSE; 
+   ONS_1D := FALSE; 
+   ONS_1M := FALSE; 
+   CLR := FALSE; 
+   JRSMQ.CLR := FALSE; 
+   JRSMQ.SPARE := FALSE; 
+   JRSMQ.SPARE2 := FALSE; 
+   JRSMQ.SPARE3 := FALSE; 
+   JRSMQ.Flow := 0.000000e+000; 
+   JRXMQ.CLR := FALSE; 
+   JRXMQ.SPARE := FALSE; 
+   JRXMQ.SPARE2 := FALSE; 
+   JRXMQ.SPARE3 := FALSE; 
+   JRXMQ.Flow := 0.000000e+000; 
+   JRZSMQ.CLR := FALSE; 
+   JRZSMQ.SPARE := FALSE; 
+   JRZSMQ.SPARE2 := FALSE; 
+   JRZSMQ.SPARE3 := FALSE; 
+   JRZSMQ.Flow := 0.000000e+000; 
+   JRZXMQ.CLR := FALSE; 
+   JRZXMQ.SPARE := FALSE; 
+   JRZXMQ.SPARE2 := FALSE; 
+   JRZXMQ.SPARE3 := FALSE; 
+   JRZXMQ.Flow := 0.000000e+000; 
+   JRYSMQ.CLR := FALSE; 
+   JRYSMQ.SPARE := FALSE; 
+   JRYSMQ.SPARE2 := FALSE; 
+   JRYSMQ.SPARE3 := FALSE; 
+   JRYSMQ.Flow := 0.000000e+000; 
+   JRYXMQ.CLR := FALSE; 
+   JRYXMQ.SPARE := FALSE; 
+   JRYXMQ.SPARE2 := FALSE; 
+   JRYXMQ.SPARE3 := FALSE; 
+   JRYXMQ.Flow := 0.000000e+000; 
+   MQZ := 0.000000e+000; 
+   MQZLL := 0.000000e+000; 
+   jrsmq_2.CLR := FALSE; 
+   jrsmq_2.SPARE := FALSE; 
+   jrsmq_2.SPARE2 := FALSE; 
+   jrsmq_2.SPARE3 := FALSE; 
+   jrsmq_2.Flow := 0.000000e+000; 
+END_DATA_BLOCK
+
+DATA_BLOCK "AI_F_Reset"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   PV001 : BOOL ;	//1#助燃风机出口蝶阀反馈
+   PV002 : BOOL ;	//2#助燃风机出口蝶阀反馈
+   PV003 : BOOL ;	//烟道闸阀反馈
+   AT001 : BOOL ;	//残氧分析仪
+   TT116 : BOOL ;	//钢坯红外检测
+   FT101 : BOOL ;	//净环水来水总管流量
+   M01_C : BOOL ;	//1#助燃风机电流
+   M02_C : BOOL ;	//2#助燃风机电流
+   PT013 : BOOL ;	//炉膛压力
+   PT014 : BOOL ;	//煤气总管压力
+   PT015 : BOOL ;	//换热器前冷空气压力
+   PT016 : BOOL ;	//换热器后空气压力
+   PT019 : BOOL ;	//净换水来水总管压力
+   PT020 : BOOL ;	//净环水回水总管压力
+   PT021 : BOOL ;	//浊环水来水总管压力
+   FV001 : BOOL ;	//均热段上左煤气调节阀阀位反馈
+   FV002 : BOOL ;	//均热段上右煤气调节阀阀位反馈
+   FV003 : BOOL ;	//均热段下左煤气调节阀阀位反馈
+   FV004 : BOOL ;	//均热段下右煤气调节阀阀位反馈
+   FV005 : BOOL ;	//加热段上煤气调节阀阀位反馈
+   FV006 : BOOL ;	//加热段上煤气调节阀阀位反馈
+   FV007 : BOOL ;	//均热段上左空气调节阀阀位反馈
+   FV008 : BOOL ;	//均热段上右空气调节阀阀位反馈
+   FV009 : BOOL ;	//均热段下左空气调节阀阀位反馈
+   FV010 : BOOL ;	//均热段下右空气调节阀阀位反馈
+   FV011 : BOOL ;	//加热段上空气调节阀阀位反馈
+   FV012 : BOOL ;	//加热段上空气调节阀阀位反馈
+   FT001 : BOOL ;	//均热段上左煤气流量
+   FT002 : BOOL ;	//均热段上右煤气流量
+   FT003 : BOOL ;	//均热段下左煤气流量
+   FT004 : BOOL ;	//均热段下右煤气流量
+   FT005 : BOOL ;	//加热段上煤气流量
+   FT006 : BOOL ;	//加热段上煤气流量
+   FT007 : BOOL ;	//均热段上左空气流量
+   FT008 : BOOL ;	//均热段上右空气流量
+   FT009 : BOOL ;	//均热段下左空气流量
+   FT010 : BOOL ;	//均热段下右空气流量
+   FT011 : BOOL ;	//加热段上空气流量
+   FT012 : BOOL ;	//加热段上空气流量
+   PT001 : BOOL ;	//均热段上左煤气压力
+   PT002 : BOOL ;	//均热段上右煤气压力
+   PT003 : BOOL ;	//均热段下左煤气压力
+   PT004 : BOOL ;	//均热段下右煤气压力
+   PT005 : BOOL ;	//加热段上煤气压力
+   PT006 : BOOL ;	//加热段上煤气压力
+   PT007 : BOOL ;	//均热段上左空气压力
+   PT008 : BOOL ;	//均热段上右空气压力
+   PT009 : BOOL ;	//均热段下左空气压力
+   PT010 : BOOL ;	//均热段下右空气压力
+   PT011 : BOOL ;	//加热段上空气压力
+   PT012 : BOOL ;	//加热段上空气压力
+   PT017 : BOOL ;	//氮气总管压力
+   PT018 : BOOL ;	//压缩空气压力
+   FV013 : BOOL ;	//新增加热段上空气调节阀阀位反馈
+   FV014 : BOOL ;	//新增加热段上煤气调节阀阀位反馈
+   FT013 : BOOL ;	//新增加热段上空气流量
+   FT014 : BOOL ;	//新增加热段上煤气流量
+   PT013_2 : BOOL ;	//新增加热段上空气压力
+   PT015_2 : BOOL ;	//新增加热段上煤气气压力
+   FT019 : BOOL ;	//新增5
+   FT020 : BOOL ;	//新增6
+  END_STRUCT ;	
+BEGIN
+   PV001 := FALSE; 
+   PV002 := FALSE; 
+   PV003 := FALSE; 
+   AT001 := FALSE; 
+   TT116 := FALSE; 
+   FT101 := FALSE; 
+   M01_C := FALSE; 
+   M02_C := FALSE; 
+   PT013 := FALSE; 
+   PT014 := FALSE; 
+   PT015 := FALSE; 
+   PT016 := FALSE; 
+   PT019 := FALSE; 
+   PT020 := FALSE; 
+   PT021 := FALSE; 
+   FV001 := FALSE; 
+   FV002 := FALSE; 
+   FV003 := FALSE; 
+   FV004 := FALSE; 
+   FV005 := FALSE; 
+   FV006 := FALSE; 
+   FV007 := FALSE; 
+   FV008 := FALSE; 
+   FV009 := FALSE; 
+   FV010 := FALSE; 
+   FV011 := FALSE; 
+   FV012 := FALSE; 
+   FT001 := FALSE; 
+   FT002 := FALSE; 
+   FT003 := FALSE; 
+   FT004 := FALSE; 
+   FT005 := FALSE; 
+   FT006 := FALSE; 
+   FT007 := FALSE; 
+   FT008 := FALSE; 
+   FT009 := FALSE; 
+   FT010 := FALSE; 
+   FT011 := FALSE; 
+   FT012 := FALSE; 
+   PT001 := FALSE; 
+   PT002 := FALSE; 
+   PT003 := FALSE; 
+   PT004 := FALSE; 
+   PT005 := FALSE; 
+   PT006 := FALSE; 
+   PT007 := FALSE; 
+   PT008 := FALSE; 
+   PT009 := FALSE; 
+   PT010 := FALSE; 
+   PT011 := FALSE; 
+   PT012 := FALSE; 
+   PT017 := FALSE; 
+   PT018 := FALSE; 
+   FV013 := FALSE; 
+   FV014 := FALSE; 
+   FT013 := FALSE; 
+   FT014 := FALSE; 
+   PT013_2 := FALSE; 
+   PT015_2 := FALSE; 
+   FT019 := FALSE; 
+   FT020 := FALSE; 
+END_DATA_BLOCK
+
+DATA_BLOCK "AI_R_F"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   PV001 : BOOL ;	//1#助燃风机出口蝶阀反馈
+   PV002 : BOOL ;	//2#助燃风机出口蝶阀反馈
+   PV003 : BOOL ;	//烟道闸阀反馈
+   AT001 : BOOL ;	//残氧分析仪
+   TT116 : BOOL ;	//钢坯红外检测
+   FT101 : BOOL ;	//净环水来水总管流量
+   M01_C : BOOL ;	//1#助燃风机电流
+   M02_C : BOOL ;	//2#助燃风机电流
+   PT013 : BOOL ;	//炉膛压力
+   PT014 : BOOL ;	//煤气总管压力
+   PT015 : BOOL ;	//换热器前冷空气压力
+   PT016 : BOOL ;	//换热器后空气压力
+   PT019 : BOOL ;	//净换水来水总管压力
+   PT020 : BOOL ;	//净环水回水总管压力
+   PT021 : BOOL ;	//浊环水来水总管压力
+   PT014_2 : BOOL ;	//煤气总管压力阀前
+   FV001 : BOOL ;	//均热段上左煤气调节阀阀位反馈
+   FV002 : BOOL ;	//均热段上右煤气调节阀阀位反馈
+   FV003 : BOOL ;	//均热段下左煤气调节阀阀位反馈
+   FV004 : BOOL ;	//均热段下右煤气调节阀阀位反馈
+   FV005 : BOOL ;	//加热段上煤气调节阀阀位反馈
+   FV006 : BOOL ;	//加热段上煤气调节阀阀位反馈
+   FV007 : BOOL ;	//均热段上左空气调节阀阀位反馈
+   FV008 : BOOL ;	//均热段上右空气调节阀阀位反馈
+   FV009 : BOOL ;	//均热段下左空气调节阀阀位反馈
+   FV010 : BOOL ;	//均热段下右空气调节阀阀位反馈
+   FV011 : BOOL ;	//加热段上空气调节阀阀位反馈
+   FV012 : BOOL ;	//加热段上空气调节阀阀位反馈
+   FT001 : BOOL ;	//均热段上左煤气流量
+   FT002 : BOOL ;	//均热段上右煤气流量
+   FT003 : BOOL ;	//均热段下左煤气流量
+   FT004 : BOOL ;	//均热段下右煤气流量
+   FT005 : BOOL ;	//加热段上煤气流量
+   FT006 : BOOL ;	//加热段上煤气流量
+   FT007 : BOOL ;	//均热段上左空气流量
+   FT008 : BOOL ;	//均热段上右空气流量
+   FT009 : BOOL ;	//均热段下左空气流量
+   FT010 : BOOL ;	//均热段下右空气流量
+   FT011 : BOOL ;	//加热段上空气流量
+   FT012 : BOOL ;	//加热段上空气流量
+   PT001 : BOOL ;	//均热段上左煤气压力
+   PT002 : BOOL ;	//均热段上右煤气压力
+   PT003 : BOOL ;	//均热段下左煤气压力
+   PT004 : BOOL ;	//均热段下右煤气压力
+   PT005 : BOOL ;	//加热段上煤气压力
+   PT006 : BOOL ;	//加热段上煤气压力
+   PT007 : BOOL ;	//均热段上左空气压力
+   PT008 : BOOL ;	//均热段上右空气压力
+   PT009 : BOOL ;	//均热段下左空气压力
+   PT010 : BOOL ;	//均热段下右空气压力
+   PT011 : BOOL ;	//加热段上空气压力
+   PT012 : BOOL ;	//加热段上空气压力
+   PT017 : BOOL ;	//氮气总管压力
+   PT018 : BOOL ;	//压缩空气压力
+   PV016 : BOOL ;	//煤气总管压力调节阀
+   FT013 : BOOL ;	//新增加热段上空气流量
+   FT014 : BOOL ;	//新增加热段上煤气流量
+   FV013 : BOOL ;	//新增加热段上空气调节阀阀位反馈
+   FV014 : BOOL ;	//新增加热段上煤气气调节阀阀位反馈
+   PT013_2 : BOOL ;	//新增加热段上空气压力
+   PT015_2 : BOOL ;	//新增加热段上煤气压力
+   FT019 : BOOL ;	//新增5
+   FT020 : BOOL ;	//新增6
+  END_STRUCT ;	
+BEGIN
+   PV001 := FALSE; 
+   PV002 := FALSE; 
+   PV003 := FALSE; 
+   AT001 := FALSE; 
+   TT116 := FALSE; 
+   FT101 := FALSE; 
+   M01_C := FALSE; 
+   M02_C := FALSE; 
+   PT013 := FALSE; 
+   PT014 := FALSE; 
+   PT015 := FALSE; 
+   PT016 := FALSE; 
+   PT019 := FALSE; 
+   PT020 := FALSE; 
+   PT021 := FALSE; 
+   PT014_2 := FALSE; 
+   FV001 := FALSE; 
+   FV002 := FALSE; 
+   FV003 := FALSE; 
+   FV004 := FALSE; 
+   FV005 := FALSE; 
+   FV006 := FALSE; 
+   FV007 := FALSE; 
+   FV008 := FALSE; 
+   FV009 := FALSE; 
+   FV010 := FALSE; 
+   FV011 := FALSE; 
+   FV012 := FALSE; 
+   FT001 := FALSE; 
+   FT002 := FALSE; 
+   FT003 := FALSE; 
+   FT004 := FALSE; 
+   FT005 := FALSE; 
+   FT006 := FALSE; 
+   FT007 := FALSE; 
+   FT008 := FALSE; 
+   FT009 := FALSE; 
+   FT010 := FALSE; 
+   FT011 := FALSE; 
+   FT012 := FALSE; 
+   PT001 := FALSE; 
+   PT002 := FALSE; 
+   PT003 := FALSE; 
+   PT004 := FALSE; 
+   PT005 := FALSE; 
+   PT006 := FALSE; 
+   PT007 := FALSE; 
+   PT008 := FALSE; 
+   PT009 := FALSE; 
+   PT010 := FALSE; 
+   PT011 := FALSE; 
+   PT012 := FALSE; 
+   PT017 := FALSE; 
+   PT018 := FALSE; 
+   PV016 := FALSE; 
+   FT013 := FALSE; 
+   FT014 := FALSE; 
+   FV013 := FALSE; 
+   FV014 := FALSE; 
+   PT013_2 := FALSE; 
+   PT015_2 := FALSE; 
+   FT019 := FALSE; 
+   FT020 := FALSE; 
+END_DATA_BLOCK
+
+DATA_BLOCK "Te_Current"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   Type_Current : STRUCT 	//当前执行钢种温度
+    H_UP : REAL ;	//加热段上温度画面设定
+    H_UNDER : REAL ;	//加热段下温度画面设定
+    S_UPL : REAL ;	//均热段上左温度画面设定
+    S_UPR : REAL ;	//均热段上右温度画面设定
+    S_UNDERL : REAL ;	//均热段下左温度画面设定
+    S_UNDERR : REAL ;	//均热段下右温度画面设定
+    TYPE_S : STRING  [10 ];	
+   END_STRUCT ;	
+   AIRGAS_RATIO : REAL ;	//空煤气比
+   WRAP1 : REAL  := 8.000000e-002;	//上偏移量
+   WRAP2 : REAL  := 8.000000e-002;	//下偏移量
+   TypeA_ctrl : STRUCT 	
+    Load : BOOL ;	//选择
+    Load_Act : BOOL ;	//选择确认
+    Unload : BOOL ;	//读取
+    Unload1 : BOOL ;	//读取确认
+   END_STRUCT ;	
+   TypeB_ctrl : STRUCT 	
+    Load : BOOL ;	//选择
+    Load_Act : BOOL ;	//选择确认
+    Unload : BOOL ;	//读取
+    Unload1 : BOOL ;	//读取确认
+   END_STRUCT ;	
+   TypeC_ctrl : STRUCT 	
+    Load : BOOL ;	//选择
+    Load_Act : BOOL ;	//选择确认
+    Unload : BOOL ;	//读取
+    Unload1 : BOOL ;	//读取确认
+   END_STRUCT ;	
+   TypeD_ctrl : STRUCT 	
+    Load : BOOL ;	//选择
+    Load_Act : BOOL ;	//选择确认
+    Unload : BOOL ;	//读取
+    Unload1 : BOOL ;	//读取确认
+   END_STRUCT ;	
+   TypeE_ctrl : STRUCT 	
+    Load : BOOL ;	//选择
+    Load_Act : BOOL ;	//选择确认
+    Unload : BOOL ;	//读取
+    Unload1 : BOOL ;	//读取确认
+   END_STRUCT ;	
+   H_UP : REAL ;	//新增加热段上温度画面设定
+  END_STRUCT ;	
+BEGIN
+   Type_Current.H_UP := 0.000000e+000; 
+   Type_Current.H_UNDER := 0.000000e+000; 
+   Type_Current.S_UPL := 0.000000e+000; 
+   Type_Current.S_UPR := 0.000000e+000; 
+   Type_Current.S_UNDERL := 0.000000e+000; 
+   Type_Current.S_UNDERR := 0.000000e+000; 
+   Type_Current.TYPE_S := ''; 
+   AIRGAS_RATIO := 0.000000e+000; 
+   WRAP1 := 0.000000e+000; 
+   WRAP2 := 0.000000e+000; 
+   TypeA_ctrl.Load := FALSE; 
+   TypeA_ctrl.Load_Act := FALSE; 
+   TypeA_ctrl.Unload := FALSE; 
+   TypeA_ctrl.Unload1 := FALSE; 
+   TypeB_ctrl.Load := FALSE; 
+   TypeB_ctrl.Load_Act := FALSE; 
+   TypeB_ctrl.Unload := FALSE; 
+   TypeB_ctrl.Unload1 := FALSE; 
+   TypeC_ctrl.Load := FALSE; 
+   TypeC_ctrl.Load_Act := FALSE; 
+   TypeC_ctrl.Unload := FALSE; 
+   TypeC_ctrl.Unload1 := FALSE; 
+   TypeD_ctrl.Load := FALSE; 
+   TypeD_ctrl.Load_Act := FALSE; 
+   TypeD_ctrl.Unload := FALSE; 
+   TypeD_ctrl.Unload1 := FALSE; 
+   TypeE_ctrl.Load := FALSE; 
+   TypeE_ctrl.Load_Act := FALSE; 
+   TypeE_ctrl.Unload := FALSE; 
+   TypeE_ctrl.Unload1 := FALSE; 
+   H_UP := 0.000000e+000; 
+END_DATA_BLOCK
+
+DATA_BLOCK "空燃比"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   JRS_RAT : REAL ;	//加热段上空燃比
+   JRX_RAT : REAL ;	//加热段下空燃比
+   JRZS_RAT : REAL ;	//均热段左上空燃比
+   JRZX_RAT : REAL ;	//均热段左下空燃比
+   JRYS_RAT : REAL ;	//均热段右上空燃比
+   JRYX_RAT : REAL ;	//均热段右下空燃比
+   JRS_fact : REAL ;	//加热段上实际比
+   JRX_fact : REAL ;	//加热段下实际比
+   JRZS_fact : REAL ;	//均热段左上实际比
+   JRZX_fact : REAL ;	//均热段左下实际比
+   JRYS_fact : REAL ;	//均热段右上实际比
+   JRYX_fact : REAL ;	//均热段右下实际比
+   newjrs_fact : REAL ;	//新增加热段上实际比
+   newjrs_RAT : REAL ;	//新增加热段上空然比
+  END_STRUCT ;	
+BEGIN
+   JRS_RAT := 1.200000e+000; 
+   JRX_RAT := 1.200000e+000; 
+   JRZS_RAT := 1.200000e+000; 
+   JRZX_RAT := 1.200000e+000; 
+   JRYS_RAT := 1.200000e+000; 
+   JRYX_RAT := 1.200000e+000; 
+   JRS_fact := 0.000000e+000; 
+   JRX_fact := 0.000000e+000; 
+   JRZS_fact := 0.000000e+000; 
+   JRZX_fact := 0.000000e+000; 
+   JRYS_fact := 0.000000e+000; 
+   JRYX_fact := 0.000000e+000; 
+   newjrs_fact := 0.000000e+000; 
+   newjrs_RAT := 0.000000e+000; 
+END_DATA_BLOCK
+
+DATA_BLOCK "as"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   H_UP : STRUCT 	
+    G_ADD : BOOL ;	//阀开
+    G_ADD1 : BOOL ;	
+    G_SUB : BOOL ;	//阀关
+    G_SUB1 : BOOL ;	
+    A_ADD : BOOL ;	//阀开
+    A_ADD1 : BOOL ;	
+    A_SUB : BOOL ;	//阀关
+    A_SUB1 : BOOL ;	
+   END_STRUCT ;	
+   H_UNDER : STRUCT 	
+    G_ADD : BOOL ;	//阀开
+    G_ADD1 : BOOL ;	
+    G_SUB : BOOL ;	//阀关
+    G_SUB1 : BOOL ;	
+    A_ADD : BOOL ;	//阀开
+    A_ADD1 : BOOL ;	
+    A_SUB : BOOL ;	//阀关
+    A_SUB1 : BOOL ;	
+   END_STRUCT ;	
+   S_LUP : STRUCT 	
+    G_ADD : BOOL ;	//阀开
+    G_ADD1 : BOOL ;	
+    G_SUB : BOOL ;	//阀关
+    G_SUB1 : BOOL ;	
+    A_ADD : BOOL ;	//阀开
+    A_ADD1 : BOOL ;	
+    A_SUB : BOOL ;	//阀关
+    A_SUB1 : BOOL ;	
+   END_STRUCT ;	
+   S_RUP : STRUCT 	
+    G_ADD : BOOL ;	//阀开
+    G_ADD1 : BOOL ;	
+    G_SUB : BOOL ;	//阀关
+    G_SUB1 : BOOL ;	
+    A_ADD : BOOL ;	//阀开
+    A_ADD1 : BOOL ;	
+    A_SUB : BOOL ;	//阀关
+    A_SUB1 : BOOL ;	
+   END_STRUCT ;	
+   S_LUNDER : STRUCT 	
+    G_ADD : BOOL ;	//阀开
+    G_ADD1 : BOOL ;	
+    G_SUB : BOOL ;	//阀关
+    G_SUB1 : BOOL ;	
+    A_ADD : BOOL ;	//阀开
+    A_ADD1 : BOOL ;	
+    A_SUB : BOOL ;	//阀关
+    A_SUB1 : BOOL ;	
+   END_STRUCT ;	
+   S_FUNDER : STRUCT 	
+    G_ADD : BOOL ;	//阀开
+    G_ADD1 : BOOL ;	
+    G_SUB : BOOL ;	//阀关
+    G_SUB1 : BOOL ;	
+    A_ADD : BOOL ;	//阀开
+    A_ADD1 : BOOL ;	
+    A_SUB : BOOL ;	//阀关
+    A_SUB1 : BOOL ;	
+   END_STRUCT ;	
+   PV003 : STRUCT 	
+    ADD : BOOL ;	//阀开
+    ADD1 : BOOL ;	
+    SUB : BOOL ;	//阀关
+    SUB1 : BOOL ;	
+   END_STRUCT ;	
+   CB1 : STRUCT 	
+    ADD : BOOL ;	//阀开
+    ADD1 : BOOL ;	
+    SUB : BOOL ;	//阀关
+    SUB1 : BOOL ;	
+   END_STRUCT ;	
+   CB2 : STRUCT 	
+    ADD : BOOL ;	//阀开
+    ADD1 : BOOL ;	
+    SUB : BOOL ;	//阀关
+    SUB1 : BOOL ;	
+   END_STRUCT ;	
+  END_STRUCT ;	
+BEGIN
+   H_UP.G_ADD := FALSE; 
+   H_UP.G_ADD1 := FALSE; 
+   H_UP.G_SUB := FALSE; 
+   H_UP.G_SUB1 := FALSE; 
+   H_UP.A_ADD := FALSE; 
+   H_UP.A_ADD1 := FALSE; 
+   H_UP.A_SUB := FALSE; 
+   H_UP.A_SUB1 := FALSE; 
+   H_UNDER.G_ADD := FALSE; 
+   H_UNDER.G_ADD1 := FALSE; 
+   H_UNDER.G_SUB := FALSE; 
+   H_UNDER.G_SUB1 := FALSE; 
+   H_UNDER.A_ADD := FALSE; 
+   H_UNDER.A_ADD1 := FALSE; 
+   H_UNDER.A_SUB := FALSE; 
+   H_UNDER.A_SUB1 := FALSE; 
+   S_LUP.G_ADD := FALSE; 
+   S_LUP.G_ADD1 := FALSE; 
+   S_LUP.G_SUB := FALSE; 
+   S_LUP.G_SUB1 := FALSE; 
+   S_LUP.A_ADD := FALSE; 
+   S_LUP.A_ADD1 := FALSE; 
+   S_LUP.A_SUB := FALSE; 
+   S_LUP.A_SUB1 := FALSE; 
+   S_RUP.G_ADD := FALSE; 
+   S_RUP.G_ADD1 := FALSE; 
+   S_RUP.G_SUB := FALSE; 
+   S_RUP.G_SUB1 := FALSE; 
+   S_RUP.A_ADD := FALSE; 
+   S_RUP.A_ADD1 := FALSE; 
+   S_RUP.A_SUB := FALSE; 
+   S_RUP.A_SUB1 := FALSE; 
+   S_LUNDER.G_ADD := FALSE; 
+   S_LUNDER.G_ADD1 := FALSE; 
+   S_LUNDER.G_SUB := FALSE; 
+   S_LUNDER.G_SUB1 := FALSE; 
+   S_LUNDER.A_ADD := FALSE; 
+   S_LUNDER.A_ADD1 := FALSE; 
+   S_LUNDER.A_SUB := FALSE; 
+   S_LUNDER.A_SUB1 := FALSE; 
+   S_FUNDER.G_ADD := FALSE; 
+   S_FUNDER.G_ADD1 := FALSE; 
+   S_FUNDER.G_SUB := FALSE; 
+   S_FUNDER.G_SUB1 := FALSE; 
+   S_FUNDER.A_ADD := FALSE; 
+   S_FUNDER.A_ADD1 := FALSE; 
+   S_FUNDER.A_SUB := FALSE; 
+   S_FUNDER.A_SUB1 := FALSE; 
+   PV003.ADD := FALSE; 
+   PV003.ADD1 := FALSE; 
+   PV003.SUB := FALSE; 
+   PV003.SUB1 := FALSE; 
+   CB1.ADD := FALSE; 
+   CB1.ADD1 := FALSE; 
+   CB1.SUB := FALSE; 
+   CB1.SUB1 := FALSE; 
+   CB2.ADD := FALSE; 
+   CB2.ADD1 := FALSE; 
+   CB2.SUB := FALSE; 
+   CB2.SUB1 := FALSE; 
+END_DATA_BLOCK
+
+DATA_BLOCK "H_UP_C"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   TE_Sel : STRUCT 	
+    TE_H : REAL ;	//高值
+    TE_AVE : REAL ;	//平均值
+    TE_L : REAL ;	//低值
+    TE_M1 : REAL ;	
+    TE_M2 : REAL ;	
+    TE_M3 : REAL ;	
+    TE_M4 : REAL ;	
+    TE_M5 : REAL ;	
+    TE_M6 : REAL ;	
+    TE_M7 : REAL ;	
+    TE003_FAULT : BOOL ;	//温度值异常
+    TE003_ALARM : BOOL ;	
+    TE004_FAULT : BOOL ;	//温度值异常
+    TE004_ALARM : BOOL ;	
+    TE005_FAULT : BOOL ;	//温度值异常
+    TE005_ALARM : BOOL ;	
+    Dvalue_alarm : BOOL ;	//温度差值大于20度
+    TE_sel : INT ;	//温度选择
+    RT : REAL  := 1.000000e+000;	//温度控制值增加率 /S
+   END_STRUCT ;	
+   T_PID : STRUCT 	//温度PID控制参数
+    MAN_ON : BOOL ;	//温度控制手自动
+    SP_INT : REAL ;	//温度控制设定值
+    PV_IN : REAL ;	//温度控制过程值
+    MAN_IN : REAL ;	//温度控制手动设定值
+    GAIN_HMI : REAL  := 5.000000e-002;	//温度控制GAIN
+    TI : TIME  := T#10S;	//温度控制TI
+    TI_HMI : DINT ;	//温度控制TI
+    TD : REAL ;	//温度控制TD
+    DEADB_W : REAL  := 1.000000e+001;	//温度控制死区
+    LMN_HLM : REAL ;	//温度控制输出上限（ 流量 ）
+    LMN_LLM : REAL ;	//温度控制输出下限（ 流量 ）
+    LMN : REAL ;	//温度控制输出值（ 流量 ）
+    MAN_P : BOOL ;	//中间点
+    MAN_M : BOOL ;	//中间点
+    A_P : BOOL ;	//中间点
+   END_STRUCT ;	
+   G_FV_PID : STRUCT 	//煤气阀PID控制参数
+    MAN_ON : BOOL ;	//煤气阀控制手自动
+    SP_INT : REAL ;	//煤气阀控制设定值
+    PV_IN : REAL ;	//煤气阀控制过程值
+    MAN_IN : REAL ;	//煤气阀控制手动设定值
+    GAIN_HMI : REAL  := 5.000000e-002;	//煤气阀控制GAIN
+    TI : TIME  := T#10S;	//煤气阀控制TI
+    TI_HMI : DINT ;	//煤气阀控制TI
+    TD : REAL ;	//煤气阀控制TD
+    DEADB_W : REAL  := 1.000000e+001;	//煤气阀控制死区
+    LMN_HLM : REAL ;	//煤气阀控制上限（ 阀位 ）
+    LMN_LLM : REAL ;	//煤气阀控制下限（ 阀位 ）
+    LMN : REAL ;	//煤气阀控制输出值（ 阀位 ）
+    MAN_P : BOOL ;	
+    MAN_M : BOOL ;	
+    A_P : BOOL ;	
+    O_M2 : REAL ;	
+    O_M3 : REAL ;	
+   END_STRUCT ;	
+   A_FV_PID : STRUCT 	//空气阀PID控制参数
+    MAN_ON : BOOL ;	//空气阀控制手自动
+    SP_INT : REAL ;	//空气阀控制设定值
+    PV_IN : REAL ;	//空气阀控制过程值
+    MAN_IN : REAL ;	//空气阀控制手动设定值
+    GAIN_HMI : REAL  := 5.000000e-002;	//空气阀控制GAIN
+    TI : TIME  := T#10S;	//空气阀控制TI
+    TI_HMI : DINT ;	//空气阀控制TI
+    TD : REAL ;	//空气阀控制TD
+    DEADB_W : REAL  := 1.000000e+001;	//空气阀控制死区
+    LMN_HLM : REAL ;	//空气阀控制上限（ 阀位 ）
+    LMN_LLM : REAL ;	//空气阀控制下限（ 阀位 ）
+    LMN : REAL ;	//空气阀控制输出值（ 阀位 ）
+    MAN_P : BOOL ;	
+    MAN_M : BOOL ;	
+    A_P : BOOL ;	
+    O_M2 : REAL ;	
+    O_M3 : REAL ;	
+   END_STRUCT ;	
+  END_STRUCT ;	
+BEGIN
+   TE_Sel.TE_H := 0.000000e+000; 
+   TE_Sel.TE_AVE := 0.000000e+000; 
+   TE_Sel.TE_L := 0.000000e+000; 
+   TE_Sel.TE_M1 := 0.000000e+000; 
+   TE_Sel.TE_M2 := 0.000000e+000; 
+   TE_Sel.TE_M3 := 0.000000e+000; 
+   TE_Sel.TE_M4 := 0.000000e+000; 
+   TE_Sel.TE_M5 := 0.000000e+000; 
+   TE_Sel.TE_M6 := 0.000000e+000; 
+   TE_Sel.TE_M7 := 0.000000e+000; 
+   TE_Sel.TE003_FAULT := FALSE; 
+   TE_Sel.TE003_ALARM := FALSE; 
+   TE_Sel.TE004_FAULT := FALSE; 
+   TE_Sel.TE004_ALARM := FALSE; 
+   TE_Sel.TE005_FAULT := FALSE; 
+   TE_Sel.TE005_ALARM := FALSE; 
+   TE_Sel.Dvalue_alarm := FALSE; 
+   TE_Sel.TE_sel := 0; 
+   TE_Sel.RT := 1.000000e+000; 
+   T_PID.MAN_ON := FALSE; 
+   T_PID.SP_INT := 0.000000e+000; 
+   T_PID.PV_IN := 0.000000e+000; 
+   T_PID.MAN_IN := 0.000000e+000; 
+   T_PID.GAIN_HMI := 0.000000e+000; 
+   T_PID.TI := T#0MS; 
+   T_PID.TI_HMI := L#0; 
+   T_PID.TD := 0.000000e+000; 
+   T_PID.DEADB_W := 0.000000e+000; 
+   T_PID.LMN_HLM := 0.000000e+000; 
+   T_PID.LMN_LLM := 0.000000e+000; 
+   T_PID.LMN := 0.000000e+000; 
+   T_PID.MAN_P := FALSE; 
+   T_PID.MAN_M := FALSE; 
+   T_PID.A_P := FALSE; 
+   G_FV_PID.MAN_ON := FALSE; 
+   G_FV_PID.SP_INT := 0.000000e+000; 
+   G_FV_PID.PV_IN := 0.000000e+000; 
+   G_FV_PID.MAN_IN := 0.000000e+000; 
+   G_FV_PID.GAIN_HMI := 5.000000e-002; 
+   G_FV_PID.TI := T#10S; 
+   G_FV_PID.TI_HMI := L#0; 
+   G_FV_PID.TD := 0.000000e+000; 
+   G_FV_PID.DEADB_W := 1.000000e+001; 
+   G_FV_PID.LMN_HLM := 0.000000e+000; 
+   G_FV_PID.LMN_LLM := 0.000000e+000; 
+   G_FV_PID.LMN := 0.000000e+000; 
+   G_FV_PID.MAN_P := FALSE; 
+   G_FV_PID.MAN_M := FALSE; 
+   G_FV_PID.A_P := FALSE; 
+   G_FV_PID.O_M2 := 0.000000e+000; 
+   G_FV_PID.O_M3 := 0.000000e+000; 
+   A_FV_PID.MAN_ON := FALSE; 
+   A_FV_PID.SP_INT := 0.000000e+000; 
+   A_FV_PID.PV_IN := 0.000000e+000; 
+   A_FV_PID.MAN_IN := 0.000000e+000; 
+   A_FV_PID.GAIN_HMI := 5.000000e-002; 
+   A_FV_PID.TI := T#10S; 
+   A_FV_PID.TI_HMI := L#0; 
+   A_FV_PID.TD := 0.000000e+000; 
+   A_FV_PID.DEADB_W := 1.000000e+001; 
+   A_FV_PID.LMN_HLM := 0.000000e+000; 
+   A_FV_PID.LMN_LLM := 0.000000e+000; 
+   A_FV_PID.LMN := 0.000000e+000; 
+   A_FV_PID.MAN_P := FALSE; 
+   A_FV_PID.MAN_M := FALSE; 
+   A_FV_PID.A_P := FALSE; 
+   A_FV_PID.O_M2 := 0.000000e+000; 
+   A_FV_PID.O_M3 := 0.000000e+000; 
+END_DATA_BLOCK
+
+DATA_BLOCK "newH_UP_C"
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   TE_Sel : STRUCT 	
+    TE_H : REAL ;	//高值
+    TE_AVE : REAL ;	//平均值
+    TE_L : REAL ;	//低值
+    TE_M1 : REAL ;	
+    TE_M2 : REAL ;	
+    TE_M3 : REAL ;	
+    TE_M4 : REAL ;	
+    TE_M5 : REAL ;	
+    TE_M6 : REAL ;	
+    TE_M7 : REAL ;	
+    TE003_FAULT : BOOL ;	//温度值异常
+    TE003_ALARM : BOOL ;	
+    TE004_FAULT : BOOL ;	//温度值异常
+    TE004_ALARM : BOOL ;	
+    TE005_FAULT : BOOL ;	//温度值异常
+    TE005_ALARM : BOOL ;	
+    Dvalue_alarm : BOOL ;	//温度差值大于20度
+    TE_sel : INT ;	//温度选择
+    RT : REAL  := 1.000000e+000;	//温度控制值增加率 /S
+   END_STRUCT ;	
+   T_PID : STRUCT 	//温度PID控制参数
+    MAN_ON : BOOL ;	//温度控制手自动
+    SP_INT : REAL ;	//温度控制设定值
+    PV_IN : REAL ;	//温度控制过程值
+    MAN_IN : REAL ;	//温度控制手动设定值
+    GAIN_HMI : REAL  := 5.000000e-002;	//温度控制GAIN
+    TI : TIME  := T#10S;	//温度控制TI
+    TI_HMI : DINT ;	//温度控制TI
+    TD : REAL ;	//温度控制TD
+    DEADB_W : REAL  := 1.000000e+001;	//温度控制死区
+    LMN_HLM : REAL ;	//温度控制输出上限（ 流量 ）
+    LMN_LLM : REAL ;	//温度控制输出下限（ 流量 ）
+    LMN : REAL ;	//温度控制输出值（ 流量 ）
+    MAN_P : BOOL ;	//中间点
+    MAN_M : BOOL ;	//中间点
+    A_P : BOOL ;	//中间点
+   END_STRUCT ;	
+   G_FV_PID : STRUCT 	//煤气阀PID控制参数
+    MAN_ON : BOOL ;	//煤气阀控制手自动
+    SP_INT : REAL ;	//煤气阀控制设定值
+    PV_IN : REAL ;	//煤气阀控制过程值
+    MAN_IN : REAL ;	//煤气阀控制手动设定值
+    GAIN_HMI : REAL  := 5.000000e-002;	//煤气阀控制GAIN
+    TI : TIME  := T#10S;	//煤气阀控制TI
+    TI_HMI : DINT ;	//煤气阀控制TI
+    TD : REAL ;	//煤气阀控制TD
+    DEADB_W : REAL  := 1.000000e+001;	//煤气阀控制死区
+    LMN_HLM : REAL ;	//煤气阀控制上限（ 阀位 ）
+    LMN_LLM : REAL ;	//煤气阀控制下限（ 阀位 ）
+    LMN : REAL ;	//煤气阀控制输出值（ 阀位 ）
+    MAN_P : BOOL ;	
+    MAN_M : BOOL ;	
+    A_P : BOOL ;	
+    O_M2 : REAL ;	
+    O_M3 : REAL ;	
+   END_STRUCT ;	
+   A_FV_PID : STRUCT 	//空气阀PID控制参数
+    MAN_ON : BOOL ;	//空气阀控制手自动
+    SP_INT : REAL ;	//空气阀控制设定值
+    PV_IN : REAL ;	//空气阀控制过程值
+    MAN_IN : REAL ;	//空气阀控制手动设定值
+    GAIN_HMI : REAL  := 5.000000e-002;	//空气阀控制GAIN
+    TI : TIME  := T#10S;	//空气阀控制TI
+    TI_HMI : DINT ;	//空气阀控制TI
+    TD : REAL ;	//空气阀控制TD
+    DEADB_W : REAL  := 1.000000e+001;	//空气阀控制死区
+    LMN_HLM : REAL ;	//空气阀控制上限（ 阀位 ）
+    LMN_LLM : REAL ;	//空气阀控制下限（ 阀位 ）
+    LMN : REAL ;	//空气阀控制输出值（ 阀位 ）
+    MAN_P : BOOL ;	
+    MAN_M : BOOL ;	
+    A_P : BOOL ;	
+    O_M2 : REAL ;	
+    O_M3 : REAL ;	
+   END_STRUCT ;	
+   temp_pid_temputre : STRUCT 	//温度流量输出
+    all : REAL ;	//总
+    pipe_one : REAL ;	//一管
+    pipe_two : REAL ;	//二管
+   END_STRUCT ;	
+   percent : REAL  := 5.000000e-001;	//比例
+  END_STRUCT ;	
+BEGIN
+   TE_Sel.TE_H := 0.000000e+000; 
+   TE_Sel.TE_AVE := 0.000000e+000; 
+   TE_Sel.TE_L := 0.000000e+000; 
+   TE_Sel.TE_M1 := 0.000000e+000; 
+   TE_Sel.TE_M2 := 0.000000e+000; 
+   TE_Sel.TE_M3 := 0.000000e+000; 
+   TE_Sel.TE_M4 := 0.000000e+000; 
+   TE_Sel.TE_M5 := 0.000000e+000; 
+   TE_Sel.TE_M6 := 0.000000e+000; 
+   TE_Sel.TE_M7 := 0.000000e+000; 
+   TE_Sel.TE003_FAULT := FALSE; 
+   TE_Sel.TE003_ALARM := FALSE; 
+   TE_Sel.TE004_FAULT := FALSE; 
+   TE_Sel.TE004_ALARM := FALSE; 
+   TE_Sel.TE005_FAULT := FALSE; 
+   TE_Sel.TE005_ALARM := FALSE; 
+   TE_Sel.Dvalue_alarm := FALSE; 
+   TE_Sel.TE_sel := 0; 
+   TE_Sel.RT := 1.000000e+000; 
+   T_PID.MAN_ON := FALSE; 
+   T_PID.SP_INT := 0.000000e+000; 
+   T_PID.PV_IN := 0.000000e+000; 
+   T_PID.MAN_IN := 0.000000e+000; 
+   T_PID.GAIN_HMI := 0.000000e+000; 
+   T_PID.TI := T#0MS; 
+   T_PID.TI_HMI := L#0; 
+   T_PID.TD := 0.000000e+000; 
+   T_PID.DEADB_W := 0.000000e+000; 
+   T_PID.LMN_HLM := 0.000000e+000; 
+   T_PID.LMN_LLM := 0.000000e+000; 
+   T_PID.LMN := 0.000000e+000; 
+   T_PID.MAN_P := FALSE; 
+   T_PID.MAN_M := FALSE; 
+   T_PID.A_P := FALSE; 
+   G_FV_PID.MAN_ON := FALSE; 
+   G_FV_PID.SP_INT := 0.000000e+000; 
+   G_FV_PID.PV_IN := 0.000000e+000; 
+   G_FV_PID.MAN_IN := 0.000000e+000; 
+   G_FV_PID.GAIN_HMI := 5.000000e-002; 
+   G_FV_PID.TI := T#10S; 
+   G_FV_PID.TI_HMI := L#0; 
+   G_FV_PID.TD := 0.000000e+000; 
+   G_FV_PID.DEADB_W := 1.000000e+001; 
+   G_FV_PID.LMN_HLM := 0.000000e+000; 
+   G_FV_PID.LMN_LLM := 0.000000e+000; 
+   G_FV_PID.LMN := 0.000000e+000; 
+   G_FV_PID.MAN_P := FALSE; 
+   G_FV_PID.MAN_M := FALSE; 
+   G_FV_PID.A_P := FALSE; 
+   G_FV_PID.O_M2 := 0.000000e+000; 
+   G_FV_PID.O_M3 := 0.000000e+000; 
+   A_FV_PID.MAN_ON := FALSE; 
+   A_FV_PID.SP_INT := 0.000000e+000; 
+   A_FV_PID.PV_IN := 0.000000e+000; 
+   A_FV_PID.MAN_IN := 0.000000e+000; 
+   A_FV_PID.GAIN_HMI := 5.000000e-002; 
+   A_FV_PID.TI := T#10S; 
+   A_FV_PID.TI_HMI := L#0; 
+   A_FV_PID.TD := 0.000000e+000; 
+   A_FV_PID.DEADB_W := 1.000000e+001; 
+   A_FV_PID.LMN_HLM := 0.000000e+000; 
+   A_FV_PID.LMN_LLM := 0.000000e+000; 
+   A_FV_PID.LMN := 0.000000e+000; 
+   A_FV_PID.MAN_P := FALSE; 
+   A_FV_PID.MAN_M := FALSE; 
+   A_FV_PID.A_P := FALSE; 
+   A_FV_PID.O_M2 := 0.000000e+000; 
+   A_FV_PID.O_M3 := 0.000000e+000; 
+   temp_pid_temputre.all := 0.000000e+000; 
+   temp_pid_temputre.pipe_one := 0.000000e+000; 
+   temp_pid_temputre.pipe_two := 0.000000e+000; 
+   percent := 5.000000e-001; 
+END_DATA_BLOCK
+
+DATA_BLOCK DB 2405
+TITLE =
+VERSION : 0.1
+
+
+  STRUCT 	
+   T_GAIN : REAL ;	
+   T_TI : REAL ;	
+   T_SP : REAL ;	
+   T_PV : REAL ;	
+   T_MAN : REAL ;	
+   T_OUT : REAL ;	
+   FV1_GAIN : REAL ;	
+   FV1_TI : REAL ;	
+   FV1_SP : REAL ;	
+   FV1_PV : REAL ;	
+   FV1_MAN : REAL ;	
+   FV1_OUT : REAL ;	
+   FV2_GAIN : REAL ;	
+   FV2_TI : REAL ;	
+   FV2_SP : REAL ;	
+   FV2_PV : REAL ;	
+   FV2_MAN : REAL ;	
+   FV2_OUT : REAL ;	
+   Mode : INT ;	
+   Ratio : REAL ;	
+   spare : DINT ;	
+   ModeF : INT ;	//阀手自动模式
+   pipe_2 : STRUCT 	//2管
+    T_GAIN : REAL ;	
+    T_TI : REAL ;	
+    T_SP : REAL ;	
+    T_PV : REAL ;	
+    T_MAN : REAL ;	
+    T_OUT : REAL ;	
+    FV1_GAIN : REAL ;	
+    FV1_TI : REAL ;	
+    FV1_SP : REAL ;	
+    FV1_PV : REAL ;	
+    FV1_MAN : REAL ;	
+    FV1_OUT : REAL ;	
+    FV2_GAIN : REAL ;	
+    FV2_TI : REAL ;	
+    FV2_SP : REAL ;	
+    FV2_PV : REAL ;	
+    FV2_MAN : REAL ;	
+    FV2_OUT : REAL ;	
+    Mode : INT ;	
+    Ratio : REAL ;	
+    spare : DINT ;	
+    ModeF : INT ;	//阀手自动模式
+   END_STRUCT ;	
+  END_STRUCT ;	
+BEGIN
+   T_GAIN := 0.000000e+000; 
+   T_TI := 0.000000e+000; 
+   T_SP := 0.000000e+000; 
+   T_PV := 0.000000e+000; 
+   T_MAN := 0.000000e+000; 
+   T_OUT := 0.000000e+000; 
+   FV1_GAIN := 0.000000e+000; 
+   FV1_TI := 0.000000e+000; 
+   FV1_SP := 0.000000e+000; 
+   FV1_PV := 0.000000e+000; 
+   FV1_MAN := 0.000000e+000; 
+   FV1_OUT := 0.000000e+000; 
+   FV2_GAIN := 0.000000e+000; 
+   FV2_TI := 0.000000e+000; 
+   FV2_SP := 0.000000e+000; 
+   FV2_PV := 0.000000e+000; 
+   FV2_MAN := 0.000000e+000; 
+   FV2_OUT := 0.000000e+000; 
+   Mode := 0; 
+   Ratio := 0.000000e+000; 
+   spare := L#0; 
+   ModeF := 0; 
+   pipe_2.T_GAIN := 0.000000e+000; 
+   pipe_2.T_TI := 0.000000e+000; 
+   pipe_2.T_SP := 0.000000e+000; 
+   pipe_2.T_PV := 0.000000e+000; 
+   pipe_2.T_MAN := 0.000000e+000; 
+   pipe_2.T_OUT := 0.000000e+000; 
+   pipe_2.FV1_GAIN := 0.000000e+000; 
+   pipe_2.FV1_TI := 0.000000e+000; 
+   pipe_2.FV1_SP := 0.000000e+000; 
+   pipe_2.FV1_PV := 0.000000e+000; 
+   pipe_2.FV1_MAN := 0.000000e+000; 
+   pipe_2.FV1_OUT := 0.000000e+000; 
+   pipe_2.FV2_GAIN := 0.000000e+000; 
+   pipe_2.FV2_TI := 0.000000e+000; 
+   pipe_2.FV2_SP := 0.000000e+000; 
+   pipe_2.FV2_PV := 0.000000e+000; 
+   pipe_2.FV2_MAN := 0.000000e+000; 
+   pipe_2.FV2_OUT := 0.000000e+000; 
+   pipe_2.Mode := 0; 
+   pipe_2.Ratio := 0.000000e+000; 
+   pipe_2.spare := L#0; 
+   pipe_2.ModeF := 0; 
+END_DATA_BLOCK
+
+FUNCTION_BLOCK "流量累计"
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  IN : REAL ;	//小时流量
+  ons_1S : BOOL ;	
+  ons_1H : BOOL ;	
+  ons_1D : BOOL ;	
+  ons_1M : BOOL ;	
+  Clr : BOOL ;	
+  max : REAL ;	
+END_VAR
+VAR_OUTPUT
+  OUT : REAL ;	
+END_VAR
+VAR
+  P4 : BOOL ;	
+  P3 : BOOL ;	
+  P2 : BOOL ;	
+  P1 : BOOL ;	
+  FT_S1 : REAL ;	
+  FT_S : REAL ;	
+  FT_H : REAL ;	
+  FT_D : REAL ;	
+  FT_M : REAL ;	
+  STAT4 : REAL ;	
+  STAT5 : REAL ;	
+  p5 : BOOL ;	
+  STAT2 : REAL ;	
+END_VAR
+VAR_TEMP
+  TEMP3 : BOOL ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =
+
+      A(    ; 
+      A     #ons_1S; 
+      FP    #P1; 
+      JNB   _001; 
+      L     #IN; 
+      L     #FT_S1; 
+      +R    ; 
+      T     #FT_S1; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_001: A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     #FT_S1; 
+      L     3.600000e+003; 
+      /R    ; 
+      T     #FT_S; 
+_002: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A     #ons_1H; 
+      FP    #P2; 
+      JNB   _003; 
+      L     #FT_S; 
+      L     #FT_H; 
+      +R    ; 
+      T     #FT_H; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_003: A     BR; 
+      )     ; 
+      JNB   _004; 
+      L     0.000000e+000; 
+      T     #FT_S1; 
+_004: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A     #ons_1D; 
+      FP    #P3; 
+      JNB   _005; 
+      L     #FT_H; 
+      L     #FT_D; 
+      +R    ; 
+      T     #FT_D; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_005: A     BR; 
+      )     ; 
+      JNB   _006; 
+      L     0.000000e+000; 
+      T     #FT_H; 
+_006: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A     #ons_1M; 
+      FP    #P4; 
+      JNB   _007; 
+      L     #FT_D; 
+      L     #FT_M; 
+      +R    ; 
+      T     #FT_M; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_007: A     BR; 
+      )     ; 
+      JNB   _008; 
+      L     0.000000e+000; 
+      T     #FT_D; 
+_008: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     #FT_D; 
+      L     #FT_M; 
+      +R    ; 
+      T     #STAT4; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _009; 
+      L     #STAT4; 
+      L     #FT_S; 
+      +R    ; 
+      T     #STAT5; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_009: A     BR; 
+      )     ; 
+      JNB   _00a; 
+      L     #STAT5; 
+      L     #FT_H; 
+      +R    ; 
+      T     #STAT2; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_00a: A     BR; 
+      )     ; 
+      JNB   _00b; 
+      L     #STAT2; 
+      T     #OUT; 
+_00b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     #STAT2; 
+      L     #max; 
+      >=R   ; 
+      =     #TEMP3; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      O     #Clr; 
+      O     #TEMP3; 
+      )     ; 
+      FP    #p5; 
+      =     L      1.0; 
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      A     L      1.0; 
+      JNB   _00c; 
+      L     0.000000e+000; 
+      T     #FT_D; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_00c: A     BR; 
+      )     ; 
+      JNB   _00d; 
+      L     0.000000e+000; 
+      T     #FT_H; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_00d: A     BR; 
+      )     ; 
+      JNB   _00e; 
+      L     0.000000e+000; 
+      T     #FT_S1; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_00e: A     BR; 
+      )     ; 
+      JNB   _00f; 
+      L     0.000000e+000; 
+      T     #FT_M; 
+_00f: NOP   0; 
+      A(    ; 
+      A(    ; 
+      A     L      1.0; 
+      JNB   _010; 
+      L     0.000000e+000; 
+      T     #STAT4; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_010: A     BR; 
+      )     ; 
+      JNB   _011; 
+      L     0.000000e+000; 
+      T     #STAT5; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_011: A     BR; 
+      )     ; 
+      JNB   _012; 
+      L     0.000000e+000; 
+      T     #STAT2; 
+_012: NOP   0; 
+END_FUNCTION_BLOCK
+
+DATA_BLOCK DB 1371
+TITLE =
+VERSION : 0.0
+
+"流量累计"
+BEGIN
+   IN := 0.000000e+000; 
+   ons_1S := FALSE; 
+   ons_1H := FALSE; 
+   ons_1D := FALSE; 
+   ons_1M := FALSE; 
+   Clr := FALSE; 
+   max := 0.000000e+000; 
+   OUT := 0.000000e+000; 
+   P4 := FALSE; 
+   P3 := FALSE; 
+   P2 := FALSE; 
+   P1 := FALSE; 
+   FT_S1 := 0.000000e+000; 
+   FT_S := 0.000000e+000; 
+   FT_H := 0.000000e+000; 
+   FT_D := 0.000000e+000; 
+   FT_M := 0.000000e+000; 
+   STAT4 := 0.000000e+000; 
+   STAT5 := 0.000000e+000; 
+   p5 := FALSE; 
+   STAT2 := 0.000000e+000; 
+END_DATA_BLOCK
+
+FUNCTION "根据空气算燃气" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  INO : REAL ;	
+  Airfloat : REAL ;	
+  Proportion : REAL ;	
+  warp1 : REAL ;	
+  warp2 : REAL ;	
+END_VAR
+VAR_OUTPUT
+  OUT : REAL ;	
+END_VAR
+VAR_TEMP
+  TEMP6 : REAL ;	
+  TEMP7 : REAL ;	
+  TEMP8 : REAL ;	
+  TEMP9 : REAL ;	
+  TEMP10 : REAL ;	
+  TEMP11 : REAL ;	
+  TEMP12 : REAL ;	
+  TEMP13 : REAL ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =
+//空气流量/比例   1-偏差1   1+偏差2
+
+
+      A(    ; 
+      A(    ; 
+      L     #Airfloat; 
+      L     #Proportion; 
+      /R    ; 
+      T     #TEMP7; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     1.000000e+000; 
+      L     #warp2; 
+      -R    ; 
+      T     #TEMP8; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_001: A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     1.000000e+000; 
+      L     #warp1; 
+      +R    ; 
+      T     #TEMP9; 
+_002: NOP   0; 
+NETWORK
+TITLE =
+//[空气流量/比例]*[1-偏差1]    [空气流量/比例]*[1+偏差2]
+      A(    ; 
+      A(    ; 
+      L     #TEMP7; 
+      L     #TEMP8; 
+      *R    ; 
+      T     #TEMP12; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _003; 
+      L     #TEMP7; 
+      L     #TEMP9; 
+      *R    ; 
+      T     #TEMP11; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_003: A     BR; 
+      )     ; 
+      JNB   _004; 
+      L     #INO; 
+      L     1.000000e+000; 
+      *R    ; 
+      T     #TEMP6; 
+_004: NOP   0; 
+NETWORK
+TITLE =
+//下偏差 输入 最大值   上偏差   最小值
+      A(    ; 
+      CALL "MAX" (
+           IN1                      := #TEMP6,
+           IN2                      := #TEMP12,
+           IN3                      := #TEMP12,
+           RET_VAL                  := #TEMP10);
+      A     BR; 
+      )     ; 
+      JNB   _005; 
+      CALL "MIN" (
+           IN1                      := #TEMP10,
+           IN2                      := #TEMP11,
+           IN3                      := #TEMP11,
+           RET_VAL                  := #TEMP13);
+_005: NOP   0; 
+NETWORK
+TITLE =
+
+      L     #TEMP13; 
+      T     #OUT; 
+      NOP   0; 
+END_FUNCTION
+
+FUNCTION "根据燃气算空气" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  IN0 : REAL ;	
+  Naturalgas : REAL ;	
+  Warp1 : REAL ;	
+  Warp2 : REAL ;	
+  Proportion : REAL ;	
+END_VAR
+VAR_OUTPUT
+  OUT : REAL ;	
+END_VAR
+VAR_TEMP
+  temp7 : REAL ;	
+  temp8 : REAL ;	
+  temp9 : REAL ;	
+  temp10 : REAL ;	
+  temp11 : REAL ;	
+  temp12 : REAL ;	
+  temp6 : REAL ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     1.000000e+000; 
+      L     #Warp2; 
+      +R    ; 
+      T     #temp7; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     1.000000e+000; 
+      L     #Warp1; 
+      -R    ; 
+      T     #temp8; 
+_001: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      L     #Naturalgas; 
+      L     #temp7; 
+      *R    ; 
+      T     #temp9; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     #Naturalgas; 
+      L     #temp8; 
+      *R    ; 
+      T     #temp10; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_002: A     BR; 
+      )     ; 
+      JNB   _003; 
+      L     #IN0; 
+      T     #temp6; 
+_003: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      CALL "MIN" (
+           IN1                      := #temp6,
+           IN2                      := #temp9,
+           IN3                      := #temp9,
+           RET_VAL                  := #temp11);
+      A     BR; 
+      )     ; 
+      JNB   _004; 
+      CALL "MAX" (
+           IN1                      := #temp11,
+           IN2                      := #temp10,
+           IN3                      := #temp10,
+           RET_VAL                  := #temp12);
+_004: NOP   0; 
+NETWORK
+TITLE =
+
+      L     #temp12; 
+      L     #Proportion; 
+      *R    ; 
+      T     #OUT; 
+      NOP   0; 
+END_FUNCTION
+
+FUNCTION "Flow_PT" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  Raw_In : INT ;	//原始值输入
+  PV_P : REAL ;	//当前压力千帕
+  PV_T : REAL ;	//当前温度摄氏
+  CN_P : REAL ;	//绝对压力千帕
+  CN_T : REAL ;	//工作温度摄氏
+  Range : REAL ;	//量程
+  CRate : REAL ;	//小信号切除百分比
+END_VAR
+VAR_OUTPUT
+  Out : REAL ;	
+END_VAR
+VAR_TEMP
+  temp1 : REAL ;	
+  temp2 : REAL ;	
+  temp3 : DINT ;	
+  temp4 : REAL ;	
+  temp5 : REAL ;	
+  temp6 : REAL ;	
+  temp7 : REAL ;	
+  temp8 : REAL ;	
+  temp9 : REAL ;	
+  temp10 : REAL ;	
+  temp11 : REAL ;	
+  temp12 : REAL ;	
+  temp13 : REAL ;	
+  TEMP0 : BOOL ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     #CRate; 
+      L     1.000000e+002; 
+      /R    ; 
+      T     #temp1; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     2.764800e+004; 
+      L     #temp1; 
+      *R    ; 
+      T     #temp2; 
+_001: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     #Raw_In; 
+      ITD   ; 
+      T     #temp3; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     #temp3; 
+      DTR   ; 
+      T     #temp4; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_002: A     BR; 
+      =     L     53.0; 
+      A     L     53.0; 
+      A(    ; 
+      L     #temp4; 
+      L     #temp2; 
+      >=R   ; 
+      )     ; 
+      JNB   _003; 
+      L     #temp4; 
+      T     #temp5; 
+_003: NOP   0; 
+      A     L     53.0; 
+      A(    ; 
+      L     #temp4; 
+      L     #temp2; 
+      <R    ; 
+      )     ; 
+      JNB   _004; 
+      L     0.000000e+000; 
+      T     #temp5; 
+_004: NOP   0; 
+NETWORK
+TITLE =
+//TEMP10数的百分数
+      A(    ; 
+      L     #temp5; 
+      L     2.764800e+004; 
+      /R    ; 
+      T     #temp7; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _005; 
+      L     #temp7; 
+      SQRT  ; 
+      T     #temp10; 
+_005: NOP   0; 
+NETWORK
+TITLE =
+
+      L     #temp10; 
+      L     #Range; 
+      *R    ; 
+      T     #temp6; 
+      NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     #PV_P; 
+      L     1.013700e+002; 
+      +R    ; 
+      T     #temp1; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _006; 
+      L     #temp1; 
+      L     #CN_P; 
+      /R    ; 
+      T     #temp8; 
+_006: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      L     #CN_T; 
+      L     2.731500e+002; 
+      +R    ; 
+      T     #temp1; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _007; 
+      L     #PV_T; 
+      L     2.731500e+002; 
+      +R    ; 
+      T     #temp2; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_007: A     BR; 
+      )     ; 
+      JNB   _008; 
+      L     #temp1; 
+      L     #temp2; 
+      /R    ; 
+      T     #temp9; 
+_008: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     #temp8; 
+      SQRT  ; 
+      T     #temp11; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _009; 
+      L     #temp9; 
+      SQRT  ; 
+      T     #temp12; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_009: A     BR; 
+      )     ; 
+      JNB   _00a; 
+      L     #temp6; 
+      L     #temp11; 
+      *R    ; 
+      T     #temp13; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_00a: A     BR; 
+      )     ; 
+      JNB   _00b; 
+      L     #temp13; 
+      L     #temp12; 
+      *R    ; 
+      T     #Out; 
+_00b: NOP   0; 
+NETWORK
+TITLE =
+
+      O     #TEMP0; 
+      ON    #TEMP0; 
+      SAVE  ; 
+END_FUNCTION
+
+FUNCTION "AI_LINE" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  IN_SIGNAL : INT ;	//输入信号
+  H_O : REAL ;	//信号上限
+  L_O : REAL ;	//信号下限
+  H_I : REAL ;	//输入上限
+  L_I : REAL ;	//输入下限
+  F_Reset : BOOL ;	//故障复位
+END_VAR
+VAR_OUTPUT
+  OUT_Signal_R : REAL ;	//输出信号实型
+  OUT_Signal_I : INT ;	//输出信号整型
+  Out_Fault : BOOL ;	//故障输出
+END_VAR
+VAR_TEMP
+  IN_Signal_DI : DINT ;	
+  IN_Signal_R : REAL ;	
+  T_Signal : REAL ;	
+  IN_Scale : REAL ;	
+  OUT_Scale : REAL ;	
+  T_1 : REAL ;	
+  T_2 : REAL ;	
+  T_3 : REAL ;	
+  T_4 : DINT ;	
+  T_5 : INT ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =
+//输入信号转实型
+      A(    ; 
+      L     #IN_SIGNAL; 
+      ITD   ; 
+      T     #IN_Signal_DI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     #IN_Signal_DI; 
+      DTR   ; 
+      T     #IN_Signal_R; 
+_001: NOP   0; 
+NETWORK
+TITLE =
+//输入值超上下限 报警 设定锁定 复位
+      O(    ; 
+      L     #IN_Signal_R; 
+      L     #H_I; 
+      >R    ; 
+      )     ; 
+      O(    ; 
+      L     #IN_Signal_R; 
+      L     #L_I; 
+      <R    ; 
+      )     ; 
+      O     ; 
+      A     #Out_Fault; 
+      AN    #F_Reset; 
+      =     #Out_Fault; 
+NETWORK
+TITLE =
+//输入信号范围   输出信号范围
+      A(    ; 
+      L     #H_I; 
+      L     #L_I; 
+      -R    ; 
+      T     #IN_Scale; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     #H_O; 
+      L     #L_O; 
+      -R    ; 
+      T     #OUT_Scale; 
+_002: NOP   0; 
+NETWORK
+TITLE =
+//计算  （量程/输入范围）*输入值    +  量程下限
+      A(    ; 
+      A(    ; 
+      L     #OUT_Scale; 
+      L     #IN_Scale; 
+      /R    ; 
+      T     #T_1; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _003; 
+      L     #IN_Signal_R; 
+      L     #T_1; 
+      *R    ; 
+      T     #T_2; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_003: A     BR; 
+      )     ; 
+      JNB   _004; 
+      L     #T_2; 
+      L     #L_O; 
+      +R    ; 
+      T     #T_3; 
+_004: NOP   0; 
+NETWORK
+TITLE =
+//转整型输出
+      A(    ; 
+      L     #T_3; 
+      RND   ; 
+      T     #T_4; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _005; 
+      L     #T_4; 
+      T     #T_5; 
+_005: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     #T_3; 
+      T     #OUT_Signal_R; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _006; 
+      L     #T_5; 
+      T     #OUT_Signal_I; 
+_006: NOP   0; 
+END_FUNCTION
+
+FUNCTION "R2I" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  IN_REAL : REAL ;	
+END_VAR
+VAR_OUTPUT
+  OUT_INT : INT ;	
+END_VAR
+VAR_TEMP
+  M1_DINT : DINT ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     #IN_REAL; 
+      RND   ; 
+      T     #M1_DINT; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     #M1_DINT; 
+      T     #OUT_INT; 
+_001: NOP   0; 
+END_FUNCTION
+
+FUNCTION "NEW_H_UP_CTRL" : VOID
+TITLE =
+VERSION : 0.1
+
+BEGIN
+NETWORK
+TITLE =
+
+      A     "AI_F_Reset".FV013; 
+      =     L      2.0; 
+      BLD   103; 
+      CALL "AI_LINE" (
+           IN_SIGNAL                := PIW  620,
+           H_O                      := 1.000000e+002,
+           L_O                      := 0.000000e+000,
+           H_I                      := 2.764800e+004,
+           L_I                      := 0.000000e+000,
+           F_Reset                  := L      2.0,
+           OUT_Signal_R             := "AI_R".FV013,
+           OUT_Signal_I             := "AI_I".FV013,
+           Out_Fault                := "AI_R_F".FV013);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      A     "AI_F_Reset".FV014; 
+      =     L      2.0; 
+      BLD   103; 
+      CALL "AI_LINE" (
+           IN_SIGNAL                := PIW  622,
+           H_O                      := 1.000000e+002,
+           L_O                      := 0.000000e+000,
+           H_I                      := 2.764800e+004,
+           L_I                      := 0.000000e+000,
+           F_Reset                  := L      2.0,
+           OUT_Signal_R             := "AI_R".FV014,
+           OUT_Signal_I             := "AI_I".FV014,
+           Out_Fault                := "AI_R_F".FV014);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "Flow_PT" (
+           Raw_In                   := PIW  618,
+           PV_P                     := "AI_R".PT015_2,
+           PV_T                     := 2.000000e+001,
+           CN_P                     := 1.010000e+002,
+           CN_T                     := 2.000000e+001,
+           Range                    := 9.000000e+003,
+           CRate                    := 3.000000e+000,
+           Out                      := "AI_R".FT014);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      A     "AI_F_Reset".PT015_2; 
+      =     L      2.0; 
+      BLD   103; 
+      CALL "AI_LINE" (
+           IN_SIGNAL                := PIW  554,
+           H_O                      := 1.200000e+001,
+           L_O                      := 0.000000e+000,
+           H_I                      := 2.764800e+004,
+           L_I                      := 0.000000e+000,
+           F_Reset                  := L      2.0,
+           OUT_Signal_R             := "AI_R".PT015_2,
+           OUT_Signal_I             := "AI_I".PT015_2,
+           Out_Fault                := "AI_R_F".PT015_2);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "Flow_PT" (
+           Raw_In                   := PIW  616,
+           PV_P                     := "AI_R".PT013_2,
+           PV_T                     := "TE_R".TE065,
+           CN_P                     := 1.010000e+002,
+           CN_T                     := 2.000000e+001,
+           Range                    := 2.000000e+004,
+           CRate                    := 3.000000e+000,
+           Out                      := "AI_R".FT013);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      A     "AI_F_Reset".PT013_2; 
+      =     L      2.0; 
+      BLD   103; 
+      CALL "AI_LINE" (
+           IN_SIGNAL                := PIW  552,
+           H_O                      := 1.200000e+001,
+           L_O                      := 0.000000e+000,
+           H_I                      := 2.764800e+004,
+           L_I                      := 0.000000e+000,
+           F_Reset                  := L      2.0,
+           OUT_Signal_R             := "AI_R".PT013_2,
+           OUT_Signal_I             := "AI_I".PT013_2,
+           Out_Fault                := "AI_R_F".PT013_2);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      L     "AI_R".FT013; 
+      L     "AI_R".FT014; 
+      /R    ; 
+      T     "空燃比".newjrs_fact; 
+      NOP   0; 
+NETWORK
+TITLE =隔离
+//隔离
+//
+
+
+NETWORK
+TITLE =温度控制的时候，两个支管的分配比例
+
+      A(    ; 
+      A(    ; 
+      L     "H_UP_C".T_PID.LMN; 
+      T     "newH_UP_C".temp_pid_temputre.all; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     "newH_UP_C".temp_pid_temputre.all; 
+      L     "newH_UP_C".percent; 
+      *R    ; 
+      T     "newH_UP_C".temp_pid_temputre.pipe_one; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_001: A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     "newH_UP_C".temp_pid_temputre.all; 
+      L     "newH_UP_C".temp_pid_temputre.pipe_one; 
+      -R    ; 
+      T     "newH_UP_C".temp_pid_temputre.pipe_two; 
+_002: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "根据燃气算空气" (
+           IN0                      := "newH_UP_C".temp_pid_temputre.pipe_two,
+           Naturalgas               := "AI_R".FT014,
+           Warp1                    := "Te_Current".WRAP1,
+           Warp2                    := "Te_Current".WRAP2,
+           Proportion               := "空燃比".JRS_RAT,
+           OUT                      := "newH_UP_C".A_FV_PID.SP_INT);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A     "newH_UP_C".T_PID.MAN_M; 
+      JNB   _003; 
+      L     DB2405.DBD  116; 
+      T     "newH_UP_C".G_FV_PID.SP_INT; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_003: A     BR; 
+      )     ; 
+      JNB   _004; 
+      L     DB2405.DBD  140; 
+      T     "newH_UP_C".A_FV_PID.SP_INT; 
+_004: NOP   0; 
+NETWORK
+TITLE =
+
+      A     "newH_UP_C".A_FV_PID.MAN_M; 
+      =     L      2.1; 
+      BLD   103; 
+      CALL "CONT_C" , DB  1307 (
+           MAN_ON                   := L      2.1,
+           SP_INT                   := "newH_UP_C".A_FV_PID.SP_INT,
+           PV_IN                    := "newH_UP_C".A_FV_PID.PV_IN,
+           MAN                      := "newH_UP_C".A_FV_PID.MAN_IN,
+           GAIN                     := "newH_UP_C".A_FV_PID.GAIN_HMI,
+           TI                       := "newH_UP_C".A_FV_PID.TI,
+           DEADB_W                  := "newH_UP_C".A_FV_PID.DEADB_W,
+           LMN_HLM                  := "newH_UP_C".A_FV_PID.LMN_HLM,
+           LMN_LLM                  := "newH_UP_C".A_FV_PID.LMN_LLM,
+           LMN                      := "newH_UP_C".A_FV_PID.LMN);
+
+      NOP   0; 
+NETWORK
+TITLE =
+//手自动切换
+      A     M      0.1; 
+      AN    "newH_UP_C".T_PID.MAN_ON; 
+      =     L      2.0; 
+      A     L      2.0; 
+      FP    "newH_UP_C".T_PID.MAN_P; 
+      JNB   _005; 
+      L     "newH_UP_C".T_PID.LMN; 
+      T     "newH_UP_C".T_PID.MAN_IN; 
+_005: NOP   0; 
+      A     L      2.0; 
+      L     S5T#200MS; 
+      SD    T     21; 
+      NOP   0; 
+      NOP   0; 
+      NOP   0; 
+      A     T     21; 
+      =     "newH_UP_C".T_PID.MAN_M; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     "newH_UP_C".A_FV_PID.LMN; 
+      L     1.000000e+002; 
+      /R    ; 
+      T     "newH_UP_C".A_FV_PID.O_M2; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _006; 
+      L     "newH_UP_C".A_FV_PID.O_M2; 
+      L     2.764800e+004; 
+      *R    ; 
+      T     "newH_UP_C".A_FV_PID.O_M3; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_006: A     BR; 
+      )     ; 
+      JNB   _007; 
+      CALL "R2I" (
+           IN_REAL                  := "newH_UP_C".A_FV_PID.O_M3,
+           OUT_INT                  := "AO_I".fv0013);
+_007: A     BR; 
+      )     ; 
+      JNB   _008; 
+      L     "AO_I".fv0013; 
+      T     PQW  556; 
+_008: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      L     "newH_UP_C".A_FV_PID.PV_IN; 
+      T     DB2405.DBD  144; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _009; 
+      L     DB2405.DBD  148; 
+      T     "newH_UP_C".A_FV_PID.MAN_IN; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_009: A     BR; 
+      )     ; 
+      JNB   _00a; 
+      L     "newH_UP_C".A_FV_PID.LMN; 
+      T     DB2405.DBD  152; 
+_00a: NOP   0; 
+NETWORK
+TITLE =
+//阀位输出
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     "newH_UP_C".G_FV_PID.LMN; 
+      L     1.000000e+002; 
+      /R    ; 
+      T     "newH_UP_C".G_FV_PID.O_M2; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00b; 
+      L     "newH_UP_C".G_FV_PID.O_M2; 
+      L     2.764800e+004; 
+      *R    ; 
+      T     "newH_UP_C".G_FV_PID.O_M3; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_00b: A     BR; 
+      )     ; 
+      JNB   _00c; 
+      CALL "R2I" (
+           IN_REAL                  := "H_UP_C".G_FV_PID.O_M3,
+           OUT_INT                  := "AO_I".fv0014);
+_00c: A     BR; 
+      )     ; 
+      JNB   _00d; 
+      L     "AO_I".fv0014; 
+      T     PQW  554; 
+_00d: NOP   0; 
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     "AI_R".FT014; 
+      T     "newH_UP_C".G_FV_PID.PV_IN; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00e; 
+      L     "AI_R".FT013; 
+      T     "newH_UP_C".A_FV_PID.PV_IN; 
+_00e: NOP   0; 
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+
+      A     "DB_流量累计".ONS_1S; 
+      =     L      2.0; 
+      BLD   103; 
+      A     "DB_流量累计".ONS_1H; 
+      =     L      2.1; 
+      BLD   103; 
+      A     "DB_流量累计".ONS_1D; 
+      =     L      2.2; 
+      BLD   103; 
+      A     "DB_流量累计".ONS_1M; 
+      =     L      2.3; 
+      BLD   103; 
+      CALL "流量累计" , DB  1371 (
+           IN                       := "AI_R".FT014,
+           ons_1S                   := L      2.0,
+           ons_1H                   := L      2.1,
+           ons_1D                   := L      2.2,
+           ons_1M                   := L      2.3,
+           max                      := 1.000000e+013,
+           OUT                      := "DB_流量累计".jrsmq_2.Flow);
+      NOP   0; 
+NETWORK
+TITLE =
+
+      L     "AI_R".FT003; 
+      L     "AI_R".FT001; 
+      +R    ; 
+      T     LW     0; 
+      L     "AI_R".FT002; 
+      +R    ; 
+      T     LW     0; 
+      L     "AI_R".FT004; 
+      +R    ; 
+      T     LW     0; 
+      L     "AI_R".FT005; 
+      +R    ; 
+      T     LW     0; 
+      L     "AI_R".FT006; 
+      +R    ; 
+      T     LW     0; 
+      L     "AI_R".FT014; 
+
+      +R    ; 
+      T     "DB_流量累计".MQZLL; 
+
+
+
+NETWORK
+TITLE =
+//设定值变化速率设定
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     5.000000e-001; 
+      T     "Te_Current".H_UP; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00f; 
+      L     "Te_Current".H_UP; 
+      L     "newH_UP_C".T_PID.SP_INT; 
+      -R    ; 
+      T     "newH_UP_C".TE_Sel.TE_M4; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_00f: A     BR; 
+      )     ; 
+      JNB   _010; 
+      L     "newH_UP_C".TE_Sel.TE_M4; 
+      ABS   ; 
+      T     "newH_UP_C".TE_Sel.TE_M4; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_010: A     BR; 
+      )     ; 
+      A(    ; 
+      L     "newH_UP_C".TE_Sel.TE_M4; 
+      L     1.500000e+001; 
+      >R    ; 
+      )     ; 
+      JNB   _011; 
+      L     1.000000e+000; 
+      T     "newH_UP_C".TE_Sel.RT; 
+_011: NOP   0; 
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+//温度过程值选择
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "H_UP_C".TE_Sel.TE_sel; 
+      L     0; 
+      ==I   ; 
+      )     ; 
+      JNB   _012; 
+      L     "TE_R".TE003; 
+      T     "H_UP_C".T_PID.PV_IN; 
+_012: NOP   0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "H_UP_C".TE_Sel.TE_sel; 
+      L     1; 
+      ==I   ; 
+      )     ; 
+      JNB   _013; 
+      L     "TE_R".TE004; 
+      T     "H_UP_C".T_PID.PV_IN; 
+_013: NOP   0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "H_UP_C".TE_Sel.TE_sel; 
+      L     2; 
+      ==I   ; 
+      )     ; 
+      JNB   _014; 
+      L     "TE_R".TE005; 
+      T     "H_UP_C".T_PID.PV_IN; 
+_014: NOP   0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "H_UP_C".TE_Sel.TE_sel; 
+      L     3; 
+      ==I   ; 
+      )     ; 
+      JNB   _015; 
+      L     "H_UP_C".TE_Sel.TE_AVE; 
+      T     "H_UP_C".T_PID.PV_IN; 
+_015: NOP   0; 
+NETWORK
+TITLE =
+//参数设定
+      A(    ; 
+      A(    ; 
+      L     9.000000e+004; 
+      T     "newH_UP_C".T_PID.LMN_HLM; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _016; 
+      L     9.000000e+002; 
+      T     "newH_UP_C".T_PID.LMN_LLM; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_016: A     BR; 
+      )     ; 
+      JNB   _017; 
+      L     8.000000e+000; 
+      T     "newH_UP_C".T_PID.DEADB_W; 
+_017: NOP   0; 
+NETWORK
+TITLE =
+//参数设定
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "newH_UP_C".T_PID.GAIN_HMI; 
+      L     0.000000e+000; 
+      <=R   ; 
+      )     ; 
+      JNB   _018; 
+      L     5.000000e-002; 
+      T     "newH_UP_C".T_PID.GAIN_HMI; 
+_018: NOP   0; 
+      A(    ; 
+      A(    ; 
+      A     L      2.0; 
+      A(    ; 
+      L     "newH_UP_C".T_PID.TI_HMI; 
+      L     L#0; 
+      <=D   ; 
+      )     ; 
+      JNB   _019; 
+      L     L#5; 
+      T     "newH_UP_C".T_PID.TI_HMI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_019: A     BR; 
+      )     ; 
+      JNB   _01a; 
+      L     "newH_UP_C".T_PID.TI_HMI; 
+      L     L#1000; 
+      *D    ; 
+      T     MD  2000; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_01a: A     BR; 
+      )     ; 
+      JNB   _01b; 
+      L     MD  2000; 
+      T     "newH_UP_C".T_PID.TI; 
+_01b: NOP   0; 
+      A(    ; 
+      A     L      2.0; 
+      JNB   _01c; 
+      L     1.000000e-003; 
+      T     "newH_UP_C".T_PID.GAIN_HMI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_01c: A     BR; 
+      )     ; 
+      JNB   _01d; 
+      L     T#5S; 
+      T     "newH_UP_C".T_PID.TI; 
+_01d: NOP   0; 
+NETWORK
+TITLE =
+
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A(    ; 
+      O(    ; 
+      L     "Te_Current".WRAP1; 
+      L     1.100000e-001; 
+      >R    ; 
+      )     ; 
+      O(    ; 
+      L     "Te_Current".WRAP1; 
+      L     3.000000e-002; 
+      <R    ; 
+      )     ; 
+      )     ; 
+      JNB   _01e; 
+      L     8.000000e-002; 
+      T     "Te_Current".WRAP1; 
+_01e: NOP   0; 
+      A     L      2.0; 
+      A(    ; 
+      O(    ; 
+      L     "Te_Current".WRAP2; 
+      L     1.100000e-001; 
+      >R    ; 
+      )     ; 
+      O(    ; 
+      L     "Te_Current".WRAP2; 
+      L     3.000000e-002; 
+      <R    ; 
+      )     ; 
+      )     ; 
+      JNB   _01f; 
+      L     8.000000e-002; 
+      T     "Te_Current".WRAP2; 
+_01f: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "根据空气算燃气" (
+           INO                      := "newH_UP_C".temp_pid_temputre.pipe_two,
+           Airfloat                 := "AI_R".FT013,
+           Proportion               := "空燃比".JRS_RAT,
+           warp1                    := "Te_Current".WRAP1,
+           warp2                    := "Te_Current".WRAP2,
+           OUT                      := "newH_UP_C".G_FV_PID.SP_INT);
+      NOP   0; 
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+//煤气阀控制 手自动切换
+      A     M      0.1; 
+      AN    "newH_UP_C".G_FV_PID.MAN_ON; 
+      =     L      2.0; 
+      A     L      2.0; 
+      FP    "newH_UP_C".G_FV_PID.MAN_P; 
+      JNB   _020; 
+      L     "newH_UP_C".G_FV_PID.LMN; 
+      T     "newH_UP_C".G_FV_PID.MAN_IN; 
+_020: NOP   0; 
+      A     L      2.0; 
+      L     S5T#200MS; 
+      SD    T     22; 
+      NOP   0; 
+      NOP   0; 
+      NOP   0; 
+      A     T     22; 
+      =     "newH_UP_C".G_FV_PID.MAN_M; 
+NETWORK
+TITLE =
+//参数设定
+      A(    ; 
+      A(    ; 
+      L     1.000000e+002; 
+      T     "newH_UP_C".G_FV_PID.LMN_HLM; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _021; 
+      L     5.000000e+000; 
+      T     "newH_UP_C".G_FV_PID.LMN_LLM; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_021: A     BR; 
+      )     ; 
+      JNB   _022; 
+      L     5.000000e+001; 
+      T     "newH_UP_C".G_FV_PID.DEADB_W; 
+_022: NOP   0; 
+NETWORK
+TITLE =
+//参数设定
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "newH_UP_C".G_FV_PID.GAIN_HMI; 
+      L     0.000000e+000; 
+      <=R   ; 
+      )     ; 
+      JNB   _023; 
+      L     1.000000e-003; 
+      T     "newH_UP_C".G_FV_PID.GAIN_HMI; 
+_023: NOP   0; 
+      A(    ; 
+      A(    ; 
+      A     L      2.0; 
+      A(    ; 
+      L     "newH_UP_C".G_FV_PID.TI_HMI; 
+      L     L#0; 
+      <=D   ; 
+      )     ; 
+      JNB   _024; 
+      L     L#5; 
+      T     "newH_UP_C".G_FV_PID.TI_HMI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_024: A     BR; 
+      )     ; 
+      JNB   _025; 
+      L     "newH_UP_C".G_FV_PID.TI_HMI; 
+      L     L#1000; 
+      *D    ; 
+      T     MD  2000; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_025: A     BR; 
+      )     ; 
+      JNB   _026; 
+      L     MD  2000; 
+      T     "newH_UP_C".G_FV_PID.TI; 
+_026: NOP   0; 
+      A(    ; 
+      A     L      2.0; 
+      JNB   _027; 
+      L     5.000000e-004; 
+      T     "newH_UP_C".G_FV_PID.GAIN_HMI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_027: A     BR; 
+      )     ; 
+      JNB   _028; 
+      L     T#1M; 
+      T     "newH_UP_C".G_FV_PID.TI; 
+_028: NOP   0; 
+NETWORK
+TITLE =
+
+      A     "newH_UP_C".G_FV_PID.MAN_M; 
+      =     L      2.1; 
+      BLD   103; 
+      CALL "CONT_C" , DB  1205 (
+           MAN_ON                   := L      2.1,
+           SP_INT                   := "newH_UP_C".G_FV_PID.SP_INT,
+           PV_IN                    := "newH_UP_C".G_FV_PID.PV_IN,
+           MAN                      := "newH_UP_C".G_FV_PID.MAN_IN,
+           GAIN                     := "newH_UP_C".G_FV_PID.GAIN_HMI,
+           TI                       := "newH_UP_C".G_FV_PID.TI,
+           DEADB_W                  := "newH_UP_C".G_FV_PID.DEADB_W,
+           LMN_HLM                  := "newH_UP_C".G_FV_PID.LMN_HLM,
+           LMN_LLM                  := "newH_UP_C".G_FV_PID.LMN_LLM,
+           LMN                      := "newH_UP_C".G_FV_PID.LMN);
+
+      NOP   0; 
+NETWORK
+TITLE =
+//空气阀控制 手自动切换
+      A     M      0.1; 
+      AN    "newH_UP_C".A_FV_PID.MAN_ON; 
+      =     L      2.0; 
+      A     L      2.0; 
+      FP    "newH_UP_C".A_FV_PID.MAN_P; 
+      JNB   _029; 
+      L     "newH_UP_C".A_FV_PID.LMN; 
+      T     "newH_UP_C".A_FV_PID.MAN_IN; 
+_029: NOP   0; 
+      A     L      2.0; 
+      L     S5T#200MS; 
+      SD    T     23; 
+      NOP   0; 
+      NOP   0; 
+      NOP   0; 
+      A     T     23; 
+      =     "newH_UP_C".A_FV_PID.MAN_M; 
+NETWORK
+TITLE =
+//参数设定
+      A(    ; 
+      A(    ; 
+      L     1.000000e+002; 
+      T     "newH_UP_C".A_FV_PID.LMN_HLM; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _02a; 
+      L     5.000000e+000; 
+      T     "newH_UP_C".A_FV_PID.LMN_LLM; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_02a: A     BR; 
+      )     ; 
+      JNB   _02b; 
+      L     5.000000e+001; 
+      T     "newH_UP_C".A_FV_PID.DEADB_W; 
+_02b: NOP   0; 
+NETWORK
+TITLE =
+//参数设定
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A(    ; 
+      L     "newH_UP_C".A_FV_PID.GAIN_HMI; 
+      L     0.000000e+000; 
+      <=R   ; 
+      )     ; 
+      JNB   _02c; 
+      L     1.000000e-003; 
+      T     "newH_UP_C".A_FV_PID.GAIN_HMI; 
+_02c: NOP   0; 
+      A(    ; 
+      A(    ; 
+      A     L      2.0; 
+      A(    ; 
+      L     "newH_UP_C".A_FV_PID.TI_HMI; 
+      L     L#0; 
+      <=D   ; 
+      )     ; 
+      JNB   _02d; 
+      L     L#5; 
+      T     "newH_UP_C".A_FV_PID.TI_HMI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_02d: A     BR; 
+      )     ; 
+      JNB   _02e; 
+      L     "newH_UP_C".A_FV_PID.TI_HMI; 
+      L     L#1000; 
+      *D    ; 
+      T     MD  2000; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_02e: A     BR; 
+      )     ; 
+      JNB   _02f; 
+      L     MD  2000; 
+      T     "newH_UP_C".A_FV_PID.TI; 
+_02f: NOP   0; 
+      A(    ; 
+      A     L      2.0; 
+      JNB   _030; 
+      L     4.000000e-004; 
+      T     "newH_UP_C".A_FV_PID.GAIN_HMI; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_030: A     BR; 
+      )     ; 
+      JNB   _031; 
+      L     T#1M; 
+      T     "newH_UP_C".A_FV_PID.TI; 
+_031: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     "newH_UP_C".A_FV_PID.LMN; 
+      L     1.000000e+002; 
+      /R    ; 
+      T     "newH_UP_C".A_FV_PID.O_M2; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _032; 
+      L     "newH_UP_C".A_FV_PID.O_M2; 
+      L     2.764800e+004; 
+      *R    ; 
+      T     "newH_UP_C".A_FV_PID.O_M3; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_032: A     BR; 
+      )     ; 
+      JNB   _033; 
+      CALL "R2I" (
+           IN_REAL                  := "newH_UP_C".A_FV_PID.O_M3,
+           OUT_INT                  := "AO_I".fv0013);
+_033: A     BR; 
+      )     ; 
+      JNB   _034; 
+      L     "AO_I".fv0013; 
+      T     PQW  556; 
+_034: NOP   0; 
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+
+
+
+NETWORK
+TITLE =
+//上位参数
+      A(    ; 
+      A(    ; 
+      A(    ; 
+      L     DB2405.DBD   92; 
+      T     "Te_Current".Type_Current.H_UP; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _035; 
+      L     "H_UP_C".T_PID.PV_IN; 
+      T     DB2405.DBD   96; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_035: A     BR; 
+      )     ; 
+      JNB   _036; 
+      L     DB2405.DBD   16; 
+      T     "H_UP_C".T_PID.MAN_IN; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_036: A     BR; 
+      )     ; 
+      JNB   _037; 
+      L     "H_UP_C".T_PID.LMN; 
+      T     DB2405.DBD   20; 
+_037: NOP   0; 
+NETWORK
+TITLE =
+
+      A(    ; 
+      A(    ; 
+      L     "newH_UP_C".G_FV_PID.PV_IN; 
+      T     DB2405.DBD   36; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _038; 
+      L     DB2405.DBD   40; 
+      T     "newH_UP_C".G_FV_PID.MAN_IN; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_038: A     BR; 
+      )     ; 
+      JNB   _039; 
+      L     "newH_UP_C".G_FV_PID.LMN; 
+      T     DB2405.DBD   44; 
+_039: NOP   0; 
+NETWORK
+TITLE =温度控制手自动
+
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A(    ; 
+      L     DB2405.DBW   72; 
+      L     2; 
+      ==I   ; 
+      )     ; 
+      =     "newH_UP_C".T_PID.MAN_ON; 
+      A     L      2.0; 
+      A(    ; 
+      L     DB2405.DBW   82; 
+      L     2; 
+      ==I   ; 
+      )     ; 
+      =     "newH_UP_C".A_FV_PID.MAN_ON; 
+      =     "newH_UP_C".G_FV_PID.MAN_ON; 
+NETWORK
+TITLE =
+
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A     "as".H_UP.G_ADD; 
+      FP    "as".H_UP.G_ADD1; 
+      JNB   _03a; 
+      L     DB2405.DBD   40; 
+      L     1.000000e+000; 
+      +R    ; 
+      T     DB2405.DBD   40; 
+_03a: NOP   0; 
+      A     L      2.0; 
+      A     "as".H_UP.G_SUB; 
+      FP    "as".H_UP.G_SUB1; 
+      JNB   _03b; 
+      L     DB2405.DBD   40; 
+      L     -1.000000e+000; 
+      +R    ; 
+      T     DB2405.DBD   40; 
+_03b: NOP   0; 
+NETWORK
+TITLE =
+
+      A     M      0.1; 
+      =     L      2.0; 
+      A     L      2.0; 
+      A     "as".H_UP.A_ADD; 
+      FP    "as".H_UP.A_ADD1; 
+      JNB   _03c; 
+      L     DB2405.DBD   64; 
+      L     1.000000e+000; 
+      +R    ; 
+      T     DB2405.DBD   64; 
+_03c: NOP   0; 
+      A     L      2.0; 
+      A     "as".H_UP.A_SUB; 
+      FP    "as".H_UP.A_SUB1; 
+      JNB   _03d; 
+      L     DB2405.DBD   64; 
+      L     -1.000000e+000; 
+      +R    ; 
+      T     DB2405.DBD   64; 
+_03d: NOP   0; 
+END_FUNCTION
+

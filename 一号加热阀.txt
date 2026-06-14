@@ -1,0 +1,1042 @@
+FUNCTION "H_UP_CTRL" : Void
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+
+BEGIN
+NETWORK
+TITLE = 
+NETWORK
+TITLE = 温度差值大于20度
+//1。温度过高或过低 报警
+//2。求平均值
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      O(;
+      L "TE_R".TE003;
+      L 1350.0;
+      >R;
+      );
+      O(;
+      L "TE_R".TE003;
+      L 900.0;
+      <R;
+      );
+      );
+      = "H_UP_C".TE_Sel.TE003_FAULT;
+      A %L0.0;
+      A(;
+      O(;
+      L "TE_R".TE004;
+      L 1350.0;
+      >R;
+      );
+      O(;
+      L "TE_R".TE004;
+      L 900.0;
+      <R;
+      );
+      );
+      = "H_UP_C".TE_Sel.TE004_FAULT;
+      A %L0.0;
+      A(;
+      O(;
+      L "TE_R".TE005;
+      L 1350.0;
+      >R;
+      );
+      O(;
+      L "TE_R".TE005;
+      L 900.0;
+      <R;
+      );
+      );
+      = "H_UP_C".TE_Sel.TE005_FAULT;
+      A %L0.0;
+      AN "H_UP_C".TE_Sel.TE003_FAULT;
+      AN "H_UP_C".TE_Sel.TE004_FAULT;
+      AN "H_UP_C".TE_Sel.TE005_FAULT;
+      = %L0.1;
+      A(;
+      A(;
+      A %L0.1;
+      JNB Label_0;
+      L "TE_R".TE003;
+      L 0.33333;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M1;
+      AN OV;
+      SAVE;
+      CLR;
+Label_0:      A BR;
+      );
+      JNB Label_1;
+      L "TE_R".TE004;
+      L 0.33333;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M2;
+      AN OV;
+      SAVE;
+      CLR;
+Label_1:      A BR;
+      );
+      JNB Label_2;
+      L "TE_R".TE005;
+      L 0.33333;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M3;
+Label_2:      NOP 0;
+      A(;
+      A %L0.1;
+      JNB Label_3;
+      L "H_UP_C".TE_Sel.TE_M1;
+      L "H_UP_C".TE_Sel.TE_M2;
+      +R;
+      T "H_UP_C".TE_Sel.TE_M4;
+      AN OV;
+      SAVE;
+      CLR;
+Label_3:      A BR;
+      );
+      JNB Label_4;
+      L "H_UP_C".TE_Sel.TE_M4;
+      L "H_UP_C".TE_Sel.TE_M3;
+      +R;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_4:      NOP 0;
+NETWORK
+TITLE = 温度差值大于20度
+      A "Tag_159";
+      = %L0.0;
+      A(;
+      A(;
+      A %L0.0;
+      A "H_UP_C".TE_Sel.TE003_FAULT;
+      AN "H_UP_C".TE_Sel.TE004_FAULT;
+      AN "H_UP_C".TE_Sel.TE005_FAULT;
+      JNB Label_5;
+      L "TE_R".TE004;
+      L 0.5;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M1;
+      AN OV;
+      SAVE;
+      CLR;
+Label_5:      A BR;
+      );
+      JNB Label_6;
+      L "TE_R".TE005;
+      L 0.5;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M2;
+      AN OV;
+      SAVE;
+      CLR;
+Label_6:      A BR;
+      );
+      JNB Label_7;
+      L "H_UP_C".TE_Sel.TE_M1;
+      L "H_UP_C".TE_Sel.TE_M2;
+      +R;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_7:      NOP 0;
+      A(;
+      A(;
+      A %L0.0;
+      A "H_UP_C".TE_Sel.TE004_FAULT;
+      AN "H_UP_C".TE_Sel.TE003_FAULT;
+      AN "H_UP_C".TE_Sel.TE005_FAULT;
+      JNB Label_8;
+      L "TE_R".TE003;
+      L 0.5;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M1;
+      AN OV;
+      SAVE;
+      CLR;
+Label_8:      A BR;
+      );
+      JNB Label_9;
+      L "TE_R".TE005;
+      L 0.5;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M2;
+      AN OV;
+      SAVE;
+      CLR;
+Label_9:      A BR;
+      );
+      JNB Label_10;
+      L "H_UP_C".TE_Sel.TE_M1;
+      L "H_UP_C".TE_Sel.TE_M2;
+      +R;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_10:      NOP 0;
+      A(;
+      A(;
+      A %L0.0;
+      A "H_UP_C".TE_Sel.TE005_FAULT;
+      AN "H_UP_C".TE_Sel.TE003_FAULT;
+      AN "H_UP_C".TE_Sel.TE004_FAULT;
+      JNB Label_11;
+      L "TE_R".TE003;
+      L 0.5;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M1;
+      AN OV;
+      SAVE;
+      CLR;
+Label_11:      A BR;
+      );
+      JNB Label_12;
+      L "TE_R".TE004;
+      L 0.5;
+      *R;
+      T "H_UP_C".TE_Sel.TE_M2;
+      AN OV;
+      SAVE;
+      CLR;
+Label_12:      A BR;
+      );
+      JNB Label_13;
+      L "H_UP_C".TE_Sel.TE_M1;
+      L "H_UP_C".TE_Sel.TE_M2;
+      +R;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_13:      NOP 0;
+      A %L0.0;
+      A "H_UP_C".TE_Sel.TE003_FAULT;
+      A "H_UP_C".TE_Sel.TE004_FAULT;
+      AN "H_UP_C".TE_Sel.TE005_FAULT;
+      JNB Label_14;
+      L "TE_R".TE005;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_14:      NOP 0;
+      A %L0.0;
+      A "H_UP_C".TE_Sel.TE003_FAULT;
+      A "H_UP_C".TE_Sel.TE005_FAULT;
+      AN "H_UP_C".TE_Sel.TE004_FAULT;
+      JNB Label_15;
+      L "TE_R".TE004;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_15:      NOP 0;
+      A %L0.0;
+      A "H_UP_C".TE_Sel.TE004_FAULT;
+      A "H_UP_C".TE_Sel.TE005_FAULT;
+      AN "H_UP_C".TE_Sel.TE003_FAULT;
+      JNB Label_16;
+      L "TE_R".TE003;
+      T "H_UP_C".TE_Sel.TE_AVE;
+Label_16:      NOP 0;
+NETWORK
+TITLE = 温度差值大于20度
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      JNB Label_17;
+      CALL MAX
+      {value_type := 'Real'}
+      (  IN1                         := "TE_R".TE003 , 
+         IN2                         := "TE_R".TE004 , 
+         IN3                         := "TE_R".TE005 , 
+         OUT                         := "H_UP_C".TE_Sel.TE_M5
+      );
+Label_17:      NOP 0;
+      A %L0.0;
+      JNB Label_18;
+      CALL MIN
+      {value_type := 'Real'}
+      (  IN1                         := "TE_R".TE003 , 
+         IN2                         := "TE_R".TE004 , 
+         IN3                         := "TE_R".TE005 , 
+         OUT                         := "H_UP_C".TE_Sel.TE_M6
+      );
+Label_18:      NOP 0;
+      A(;
+      A(;
+      A %L0.0;
+      JNB Label_19;
+      L "H_UP_C".TE_Sel.TE_M5;
+      L "H_UP_C".TE_Sel.TE_M6;
+      -R;
+      T "H_UP_C".TE_Sel.TE_M7;
+      AN OV;
+      SAVE;
+      CLR;
+Label_19:      A BR;
+      );
+      JNB Label_20;
+      L "H_UP_C".TE_Sel.TE_M7;
+      ABS;
+      T "H_UP_C".TE_Sel.TE_M7;
+      SET;
+      SAVE;
+      CLR;
+Label_20:      A BR;
+      );
+      A(;
+      L "H_UP_C".TE_Sel.TE_M7;
+      L 20.0;
+      >R;
+      );
+      = "H_UP_C".TE_Sel.Dvalue_alarm;
+NETWORK
+TITLE = 
+//设定值变化速率设定
+      A(;
+      A(;
+      A(;
+      L 0.5;
+      T "H_UP_C".TE_Sel.RT;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_21;
+      L "Te_Current".Type_Current.H_UP;
+      L "H_UP_C".T_PID.SP_INT;
+      -R;
+      T "H_UP_C".TE_Sel.TE_M4;
+      AN OV;
+      SAVE;
+      CLR;
+Label_21:      A BR;
+      );
+      JNB Label_22;
+      L "H_UP_C".TE_Sel.TE_M4;
+      ABS;
+      T "H_UP_C".TE_Sel.TE_M4;
+      SET;
+      SAVE;
+      CLR;
+Label_22:      A BR;
+      );
+      A(;
+      L "H_UP_C".TE_Sel.TE_M4;
+      L 15.0;
+      >R;
+      );
+      JNB Label_23;
+      L 1.0;
+      T "H_UP_C".TE_Sel.RT;
+Label_23:      NOP 0;
+NETWORK
+TITLE = 
+//温度过程值选择
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".TE_Sel.TE_sel;
+      L 0;
+      ==I;
+      );
+      JNB Label_24;
+      L "TE_R".TE003;
+      T "H_UP_C".T_PID.PV_IN;
+Label_24:      NOP 0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".TE_Sel.TE_sel;
+      L 1;
+      ==I;
+      );
+      JNB Label_25;
+      L "TE_R".TE004;
+      T "H_UP_C".T_PID.PV_IN;
+Label_25:      NOP 0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".TE_Sel.TE_sel;
+      L 2;
+      ==I;
+      );
+      JNB Label_26;
+      L "TE_R".TE005;
+      T "H_UP_C".T_PID.PV_IN;
+Label_26:      NOP 0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".TE_Sel.TE_sel;
+      L 3;
+      ==I;
+      );
+      JNB Label_27;
+      L "H_UP_C".TE_Sel.TE_AVE;
+      T "H_UP_C".T_PID.PV_IN;
+Label_27:      NOP 0;
+NETWORK
+TITLE = 中间点
+//手自动切换
+      A "Tag_159";
+      AN "H_UP_C".T_PID.MAN_ON;
+      = %L0.0;
+      A %L0.0;
+      FP "H_UP_C".T_PID.MAN_P;
+      JNB Label_28;
+      L "H_UP_C".T_PID.LMN;
+      T "H_UP_C".T_PID.MAN_IN;
+Label_28:      NOP 0;
+      A %L0.0;
+      L S5T#200MS;
+      SD "Tag_224";
+      NOP 0;
+      NOP 0;
+      NOP 0;
+      A "Tag_224";
+      = "H_UP_C".T_PID.MAN_M;
+NETWORK
+TITLE = 
+//参数设定
+      A(;
+      A(;
+      L 90000.0;
+      T "H_UP_C".T_PID.LMN_HLM;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_29;
+      L 900.0;
+      T "H_UP_C".T_PID.LMN_LLM;
+      SET;
+      SAVE;
+      CLR;
+Label_29:      A BR;
+      );
+      JNB Label_30;
+      L 8.0;
+      T "H_UP_C".T_PID.DEADB_W;
+Label_30:      NOP 0;
+NETWORK
+TITLE = 
+//参数设定
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".T_PID.GAIN_HMI;
+      L 0.0;
+      <=R;
+      );
+      JNB Label_31;
+      L 0.05;
+      T "H_UP_C".T_PID.GAIN_HMI;
+Label_31:      NOP 0;
+      A(;
+      A(;
+      A %L0.0;
+      A(;
+      L "H_UP_C".T_PID.TI_HMI;
+      L DINT#0;
+      <=D;
+      );
+      JNB Label_32;
+      L DINT#5;
+      T "H_UP_C".T_PID.TI_HMI;
+      SET;
+      SAVE;
+      CLR;
+Label_32:      A BR;
+      );
+      JNB Label_33;
+      L "H_UP_C".T_PID.TI_HMI;
+      L DINT#1000;
+      *D;
+      T "Tag_178";
+      AN OV;
+      SAVE;
+      CLR;
+Label_33:      A BR;
+      );
+      JNB Label_34;
+      L "Tag_178";
+      T "H_UP_C".T_PID.TI;
+Label_34:      NOP 0;
+      A(;
+      A %L0.0;
+      JNB Label_35;
+      L 0.001;
+      T "H_UP_C".T_PID.GAIN_HMI;
+      SET;
+      SAVE;
+      CLR;
+Label_35:      A BR;
+      );
+      JNB Label_36;
+      L T#5S;
+      T "H_UP_C".T_PID.TI;
+Label_36:      NOP 0;
+NETWORK
+TITLE = 
+      A "H_UP_C".T_PID.MAN_M;
+      = %L0.0;
+      BLD 103;
+      CALL CONT_C, "DB1005"
+      (  MAN_ON                      := %L0.0 , 
+         SP_INT                      := "H_UP_C".T_PID.SP_INT , 
+         PV_IN                       := "H_UP_C".T_PID.PV_IN , 
+         MAN                         := "H_UP_C".T_PID.MAN_IN , 
+         GAIN                        := "H_UP_C".T_PID.GAIN_HMI , 
+         TI                          := "H_UP_C".T_PID.TI , 
+         DEADB_W                     := "H_UP_C".T_PID.DEADB_W , 
+         LMN_HLM                     := "H_UP_C".T_PID.LMN_HLM , 
+         LMN_LLM                     := "H_UP_C".T_PID.LMN_LLM , 
+         LMN                         := "H_UP_C".T_PID.LMN
+      );
+      NOP 0;
+NETWORK
+TITLE = 
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      O(;
+      L "Te_Current".WRAP1;
+      L 0.11;
+      >R;
+      );
+      O(;
+      L "Te_Current".WRAP1;
+      L 0.03;
+      <R;
+      );
+      );
+      JNB Label_37;
+      L 0.08;
+      T "Te_Current".WRAP1;
+Label_37:      NOP 0;
+      A %L0.0;
+      A(;
+      O(;
+      L "Te_Current".WRAP2;
+      L 0.11;
+      >R;
+      );
+      O(;
+      L "Te_Current".WRAP2;
+      L 0.03;
+      <R;
+      );
+      );
+      JNB Label_38;
+      L 0.08;
+      T "Te_Current".WRAP2;
+Label_38:      NOP 0;
+NETWORK
+TITLE = 
+      CALL "根据空气算燃气"
+      (  INO                         := "H_UP_C".T_PID.LMN , 
+         Airfloat                    := "AI_R".FT011 , 
+         Proportion                  := "空燃比".JRS_RAT , 
+         warp1                       := "Te_Current".WRAP1 , 
+         warp2                       := "Te_Current".WRAP2 , 
+         OUT                         := "H_UP_C".G_FV_PID.SP_INT
+      );
+      NOP 0;
+NETWORK
+TITLE = 
+      CALL "根据燃气算空气"
+      (  IN0                         := "H_UP_C".T_PID.LMN , 
+         Naturalgas                  := "AI_R".FT005 , 
+         Warp1                       := "Te_Current".WRAP1 , 
+         Warp2                       := "Te_Current".WRAP2 , 
+         Proportion                  := "空燃比".JRS_RAT , 
+         OUT                         := "H_UP_C".A_FV_PID.SP_INT
+      );
+      NOP 0;
+NETWORK
+TITLE = 
+NETWORK
+TITLE = 
+//煤气阀控制 手自动切换
+      A "Tag_159";
+      AN "H_UP_C".G_FV_PID.MAN_ON;
+      = %L0.0;
+      A %L0.0;
+      FP "H_UP_C".G_FV_PID.MAN_P;
+      JNB Label_39;
+      L "H_UP_C".G_FV_PID.LMN;
+      T "H_UP_C".G_FV_PID.MAN_IN;
+Label_39:      NOP 0;
+      A %L0.0;
+      L S5T#200MS;
+      SD "Tag_225";
+      NOP 0;
+      NOP 0;
+      NOP 0;
+      A "Tag_225";
+      = "H_UP_C".G_FV_PID.MAN_M;
+NETWORK
+TITLE = 
+//参数设定
+      A(;
+      A(;
+      L 100.0;
+      T "H_UP_C".G_FV_PID.LMN_HLM;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_40;
+      L 5.0;
+      T "H_UP_C".G_FV_PID.LMN_LLM;
+      SET;
+      SAVE;
+      CLR;
+Label_40:      A BR;
+      );
+      JNB Label_41;
+      L 50.0;
+      T "H_UP_C".G_FV_PID.DEADB_W;
+Label_41:      NOP 0;
+NETWORK
+TITLE = 
+      A(;
+      A "H_UP_C".T_PID.MAN_M;
+      JNB Label_42;
+      L "DB2405".FV1_SP;
+      T "H_UP_C".G_FV_PID.SP_INT;
+      SET;
+      SAVE;
+      CLR;
+Label_42:      A BR;
+      );
+      JNB Label_43;
+      L "DB2405".FV2_SP;
+      T "H_UP_C".A_FV_PID.SP_INT;
+Label_43:      NOP 0;
+NETWORK
+TITLE = 
+//参数设定
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".G_FV_PID.GAIN_HMI;
+      L 0.0;
+      <=R;
+      );
+      JNB Label_44;
+      L 0.001;
+      T "H_UP_C".G_FV_PID.GAIN_HMI;
+Label_44:      NOP 0;
+      A(;
+      A(;
+      A %L0.0;
+      A(;
+      L "H_UP_C".G_FV_PID.TI_HMI;
+      L DINT#0;
+      <=D;
+      );
+      JNB Label_45;
+      L DINT#5;
+      T "H_UP_C".G_FV_PID.TI_HMI;
+      SET;
+      SAVE;
+      CLR;
+Label_45:      A BR;
+      );
+      JNB Label_46;
+      L "H_UP_C".G_FV_PID.TI_HMI;
+      L DINT#1000;
+      *D;
+      T "Tag_178";
+      AN OV;
+      SAVE;
+      CLR;
+Label_46:      A BR;
+      );
+      JNB Label_47;
+      L "Tag_178";
+      T "H_UP_C".G_FV_PID.TI;
+Label_47:      NOP 0;
+      A(;
+      A %L0.0;
+      JNB Label_48;
+      L 0.0005;
+      T "H_UP_C".G_FV_PID.GAIN_HMI;
+      SET;
+      SAVE;
+      CLR;
+Label_48:      A BR;
+      );
+      JNB Label_49;
+      L T#1M;
+      T "H_UP_C".G_FV_PID.TI;
+Label_49:      NOP 0;
+NETWORK
+TITLE = 
+      A(;
+      L "AI_R".FT005;
+      T "H_UP_C".G_FV_PID.PV_IN;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_50;
+      L "AI_R".FT011;
+      T "H_UP_C".A_FV_PID.PV_IN;
+Label_50:      NOP 0;
+NETWORK
+TITLE = 
+      A "H_UP_C".G_FV_PID.MAN_M;
+      = %L0.0;
+      BLD 103;
+      CALL CONT_C, "DB1205"
+      (  MAN_ON                      := %L0.0 , 
+         SP_INT                      := "H_UP_C".G_FV_PID.SP_INT , 
+         PV_IN                       := "H_UP_C".G_FV_PID.PV_IN , 
+         MAN                         := "H_UP_C".G_FV_PID.MAN_IN , 
+         GAIN                        := "H_UP_C".G_FV_PID.GAIN_HMI , 
+         TI                          := "H_UP_C".G_FV_PID.TI , 
+         DEADB_W                     := "H_UP_C".G_FV_PID.DEADB_W , 
+         LMN_HLM                     := "H_UP_C".G_FV_PID.LMN_HLM , 
+         LMN_LLM                     := "H_UP_C".G_FV_PID.LMN_LLM , 
+         LMN                         := "H_UP_C".G_FV_PID.LMN
+      );
+      NOP 0;
+NETWORK
+TITLE = 
+//阀位输出
+      A(;
+      A(;
+      A(;
+      L "H_UP_C".G_FV_PID.LMN;
+      L 100.0;
+      /R;
+      T "H_UP_C".G_FV_PID.O_M2;
+      AN OV;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_51;
+      L "H_UP_C".G_FV_PID.O_M2;
+      L 27648.0;
+      *R;
+      T "H_UP_C".G_FV_PID.O_M3;
+      AN OV;
+      SAVE;
+      CLR;
+Label_51:      A BR;
+      );
+      JNB Label_52;
+      CALL "R2I"
+      (  IN_REAL                     := "H_UP_C".G_FV_PID.O_M3 , 
+         OUT_INT                     := "AO_I".FV005
+      );
+Label_52:      A BR;
+      );
+      JNB Label_53;
+      L "AO_I".FV005;
+      T "Tag_153":P;
+Label_53:      NOP 0;
+NETWORK
+TITLE = 
+//空气阀控制 手自动切换
+      A "Tag_159";
+      AN "H_UP_C".A_FV_PID.MAN_ON;
+      = %L0.0;
+      A %L0.0;
+      FP "H_UP_C".A_FV_PID.MAN_P;
+      JNB Label_54;
+      L "H_UP_C".A_FV_PID.LMN;
+      T "H_UP_C".A_FV_PID.MAN_IN;
+Label_54:      NOP 0;
+      A %L0.0;
+      L S5T#200MS;
+      SD "Tag_226";
+      NOP 0;
+      NOP 0;
+      NOP 0;
+      A "Tag_226";
+      = "H_UP_C".A_FV_PID.MAN_M;
+NETWORK
+TITLE = 
+//参数设定
+      A(;
+      A(;
+      L 100.0;
+      T "H_UP_C".A_FV_PID.LMN_HLM;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_55;
+      L 5.0;
+      T "H_UP_C".A_FV_PID.LMN_LLM;
+      SET;
+      SAVE;
+      CLR;
+Label_55:      A BR;
+      );
+      JNB Label_56;
+      L 50.0;
+      T "H_UP_C".A_FV_PID.DEADB_W;
+Label_56:      NOP 0;
+NETWORK
+TITLE = 
+//参数设定
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      L "H_UP_C".A_FV_PID.GAIN_HMI;
+      L 0.0;
+      <=R;
+      );
+      JNB Label_57;
+      L 0.001;
+      T "H_UP_C".A_FV_PID.GAIN_HMI;
+Label_57:      NOP 0;
+      A(;
+      A(;
+      A %L0.0;
+      A(;
+      L "H_UP_C".A_FV_PID.TI_HMI;
+      L DINT#0;
+      <=D;
+      );
+      JNB Label_58;
+      L DINT#5;
+      T "H_UP_C".A_FV_PID.TI_HMI;
+      SET;
+      SAVE;
+      CLR;
+Label_58:      A BR;
+      );
+      JNB Label_59;
+      L "H_UP_C".A_FV_PID.TI_HMI;
+      L DINT#1000;
+      *D;
+      T "Tag_178";
+      AN OV;
+      SAVE;
+      CLR;
+Label_59:      A BR;
+      );
+      JNB Label_60;
+      L "Tag_178";
+      T "H_UP_C".A_FV_PID.TI;
+Label_60:      NOP 0;
+      A(;
+      A %L0.0;
+      JNB Label_61;
+      L 0.0004;
+      T "H_UP_C".A_FV_PID.GAIN_HMI;
+      SET;
+      SAVE;
+      CLR;
+Label_61:      A BR;
+      );
+      JNB Label_62;
+      L T#1M;
+      T "H_UP_C".A_FV_PID.TI;
+Label_62:      NOP 0;
+NETWORK
+TITLE = 
+      A "H_UP_C".A_FV_PID.MAN_M;
+      = %L0.0;
+      BLD 103;
+      CALL CONT_C, "DB1305"
+      (  MAN_ON                      := %L0.0 , 
+         SP_INT                      := "H_UP_C".A_FV_PID.SP_INT , 
+         PV_IN                       := "H_UP_C".A_FV_PID.PV_IN , 
+         MAN                         := "H_UP_C".A_FV_PID.MAN_IN , 
+         GAIN                        := "H_UP_C".A_FV_PID.GAIN_HMI , 
+         TI                          := "H_UP_C".A_FV_PID.TI , 
+         DEADB_W                     := "H_UP_C".A_FV_PID.DEADB_W , 
+         LMN_HLM                     := "H_UP_C".A_FV_PID.LMN_HLM , 
+         LMN_LLM                     := "H_UP_C".A_FV_PID.LMN_LLM , 
+         LMN                         := "H_UP_C".A_FV_PID.LMN
+      );
+      NOP 0;
+NETWORK
+TITLE = 
+      A(;
+      A(;
+      A(;
+      L "H_UP_C".A_FV_PID.LMN;
+      L 100.0;
+      /R;
+      T "H_UP_C".A_FV_PID.O_M2;
+      AN OV;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_63;
+      L "H_UP_C".A_FV_PID.O_M2;
+      L 27648.0;
+      *R;
+      T "H_UP_C".A_FV_PID.O_M3;
+      AN OV;
+      SAVE;
+      CLR;
+Label_63:      A BR;
+      );
+      JNB Label_64;
+      CALL "R2I"
+      (  IN_REAL                     := "H_UP_C".A_FV_PID.O_M3 , 
+         OUT_INT                     := "AO_I".FV0011
+      );
+Label_64:      A BR;
+      );
+      JNB Label_65;
+      L "AO_I".FV0011;
+      T "Tag_154":P;
+Label_65:      NOP 0;
+NETWORK
+TITLE = 
+NETWORK
+TITLE = 
+NETWORK
+TITLE = 
+//上位参数
+      A(;
+      A(;
+      A(;
+      L "DB2405".T_SP;
+      T "Te_Current".Type_Current.H_UP;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_66;
+      L "H_UP_C".T_PID.PV_IN;
+      T "DB2405".T_PV;
+      SET;
+      SAVE;
+      CLR;
+Label_66:      A BR;
+      );
+      JNB Label_67;
+      L "DB2405".T_MAN;
+      T "H_UP_C".T_PID.MAN_IN;
+      SET;
+      SAVE;
+      CLR;
+Label_67:      A BR;
+      );
+      JNB Label_68;
+      L "H_UP_C".T_PID.LMN;
+      T "DB2405".T_OUT;
+Label_68:      NOP 0;
+NETWORK
+TITLE = 
+      A(;
+      A(;
+      L "H_UP_C".G_FV_PID.PV_IN;
+      T "DB2405".FV1_PV;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_69;
+      L "DB2405".FV1_MAN;
+      T "H_UP_C".G_FV_PID.MAN_IN;
+      SET;
+      SAVE;
+      CLR;
+Label_69:      A BR;
+      );
+      JNB Label_70;
+      L "H_UP_C".G_FV_PID.LMN;
+      T "DB2405".FV1_OUT;
+Label_70:      NOP 0;
+NETWORK
+TITLE = 
+      A(;
+      A(;
+      L "H_UP_C".A_FV_PID.PV_IN;
+      T "DB2405".FV2_PV;
+      SET;
+      SAVE;
+      CLR;
+      A BR;
+      );
+      JNB Label_71;
+      L "DB2405".FV2_MAN;
+      T "H_UP_C".A_FV_PID.MAN_IN;
+      SET;
+      SAVE;
+      CLR;
+Label_71:      A BR;
+      );
+      JNB Label_72;
+      L "H_UP_C".A_FV_PID.LMN;
+      T "DB2405".FV2_OUT;
+Label_72:      NOP 0;
+NETWORK
+TITLE = 温度控制手自动
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A(;
+      L "DB2405".Mode;
+      L 2;
+      ==I;
+      );
+      = "H_UP_C".T_PID.MAN_ON;
+      A %L0.0;
+      A(;
+      L "DB2405".ModeF;
+      L 2;
+      ==I;
+      );
+      = "H_UP_C".A_FV_PID.MAN_ON;
+      = "H_UP_C".G_FV_PID.MAN_ON;
+NETWORK
+TITLE = 
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A "as".H_UP.G_ADD;
+      FP "as".H_UP.G_ADD1;
+      JNB Label_73;
+      L "DB2405".FV1_MAN;
+      L 1.0;
+      +R;
+      T "DB2405".FV1_MAN;
+Label_73:      NOP 0;
+      A %L0.0;
+      A "as".H_UP.G_SUB;
+      FP "as".H_UP.G_SUB1;
+      JNB Label_74;
+      L "DB2405".FV1_MAN;
+      L -1.0;
+      +R;
+      T "DB2405".FV1_MAN;
+Label_74:      NOP 0;
+NETWORK
+TITLE = 
+      A "Tag_159";
+      = %L0.0;
+      A %L0.0;
+      A "as".H_UP.A_ADD;
+      FP "as".H_UP.A_ADD1;
+      JNB Label_75;
+      L "DB2405".FV2_MAN;
+      L 1.0;
+      +R;
+      T "DB2405".FV2_MAN;
+Label_75:      NOP 0;
+      A %L0.0;
+      A "as".H_UP.A_SUB;
+      FP "as".H_UP.A_SUB1;
+      JNB Label_76;
+      L "DB2405".FV2_MAN;
+      L -1.0;
+      +R;
+      T "DB2405".FV2_MAN;
+Label_76:      NOP 0;
+END_FUNCTION
