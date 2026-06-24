@@ -1,0 +1,875 @@
+/workspace
+Cloning into 'drop'...
+remote: Enumerating objects: 19824, done.
+remote: Counting objects: 100% (166/166), done.
+remote: Compressing objects: 100% (90/90), done.
+remote: Total 19824 (delta 111), reused 82 (delta 75), pack-reused 19658 (from 2)
+Receiving objects: 100% (19824/19824), 39.53 MiB | 6.37 MiB/s, done.
+Resolving deltas: 100% (10485/10485), done.
+/workspace/drop
+server                                   |  WARN  Unsupported engine: wanted: {"node":">=22.16.0"} (current: {"node":"v22.13.1","pnpm":"10.33.0"})
+Scope: all 6 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Cloning into 'drop'...
+remote: Enumerating objects: 19824, done.
+remote: Counting objects: 100% (166/166), done.
+remote: Compressing objects: 100% (90/90), done.
+remote: Total 19824 (delta 111), reused 82 (delta 75), pack-reused 19658 (from 2)
+Receiving objects: 100% (19824/19824), 39.53 MiB | 6.55 MiB/s, done.
+Resolving deltas: 100% (10485/10485), done.
+Downloading...
+From: https://github.com/Drop-OSS/drop/releases/download/v0.4.0/Drop.Desktop.Client_0.4.0_amd64.deb
+To: /Drop.Desktop.Client_0.4.0_amd64.deb
+100%|██████████████████████████████████████| 15.7M/15.7M [00:05<00:00, 2.84MB/s]
+/workspace/drop/server
+ WARN  Unsupported engine: wanted: {"node":">=22.16.0"} (current: {"node":"v22.13.1","pnpm":"10.33.0"})
+
+> drop@0.4.0 build /workspace/drop/server
+> nuxt build
+
+sh: 1: nuxt: not found
+ ELIFECYCLE  Command failed.
+ WARN   Local package.json exists, but node_modules missing, did you mean to install?
+/workspace/drop/server
+Listening on http://[::]:3000
+[07:15:36.832] INFO (108869): enabled metadata provider: Steam
+[07:15:36.832] INFO (108869): enabled metadata provider: PCGamingWiki
+[07:15:36.832] WARN (108869): skipping metadata provider setup: Error: Missing config item IGDB_CLIENT_ID for IGDB
+[07:15:36.833] INFO (108869): torrential detected in development mode - building from source
+[07:15:36.836] INFO (service-torrential/108869): service launched
+[07:15:36.838] INFO (service-nginx/108869): service launched
+[07:15:36.843] WARN (108869): failed to enable auth OpenID: Error: Missing all necessary OIDC configuration: 
+  OIDC_AUTHORIZATION: undefined
+  OIDC_TOKEN: undefined
+  OIDC_USERINFO: undefined
+  OIDC_SCOPES: undefined
+  OIDC_ISSUER: undefined
+  OIDC_JWKS: undefined
+[07:15:36.844] INFO (108869): enabled auth: Simple
+[07:15:36.844] INFO (108869): AuthManager initialized
+[07:15:36.849] ERROR (service-nginx/108869): 2026/06/24 07:15:36 [emerg] 108887#108887: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:36.849] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.aPIToken.deleteMany()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async _cDiYh9yWS7Hyt57m0Pfw7F_Pg893crOxPOnqzirSJR0 (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1113900) {
+  code: 'P1010',
+  meta: {
+    modelName: 'APIToken',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at PrismaPgAdapter.performIO (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:637:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.executeRaw (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:607:13)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:44382)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46278)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399)
+        at async Object.singleLoader (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:6569) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+    at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+    at async _N7tTIjHwh6zMpPlU3GVh3W0RWUi9Cw8Np7nArPvDlX4 (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1186843) {
+  code: 'P1010',
+  meta: {
+    modelName: 'ApplicationSettings',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at PrismaPgAdapter.performIO (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:637:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.queryRaw (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:568:30)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:44614)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:45058)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46278)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.library.findMany()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async _GEe93eM3VQaRvk9yLVXzirCKt1VayPjFI3kohvmr87k (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1213547) {
+  code: 'P1010',
+  meta: {
+    modelName: 'Library',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at PrismaPgAdapter.performIO (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:637:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.queryRaw (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:568:30)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:44614)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46278)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399)
+        at async Object.singleLoader (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:6569) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.certificate.findUnique()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async Object.fetch (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1216046)
+    at async CertificateAuthority.new (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1214845)
+    at async _tOczKSpyxBNNIyYhABbEr7zJwijMfbkh5f2uuoYY5BM (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1215832) {
+  code: 'P1010',
+  meta: {
+    modelName: 'Certificate',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at PrismaPgAdapter.performIO (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:637:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.queryRaw (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:568:30)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:44614)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:45058)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46278)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.task.findFirst()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async Object.triggerDailyTasks (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1156401)
+    at async Object.run (file:///workspace/drop/server/.output/server/chunks/tasks/dailyTasks.mjs:1:1088)
+    at async runTask (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:965414)
+    at async _z_yuQxsBHDYbMv8fMkxhrPCkKn7nG9JswHVEv0Ka3k (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1216495) {
+  code: 'P1010',
+  meta: {
+    modelName: 'Task',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at PrismaPgAdapter.performIO (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:637:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.queryRaw (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:568:30)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:44614)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:45058)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46278)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.depot.upsert()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async _UQULt4Uasca6IH9EsHAxPo1myTlJ2GLuBCNrnVmw (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1214397) {
+  code: 'P1010',
+  meta: {
+    modelName: 'Depot',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at PrismaPgAdapter.performIO (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:637:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.queryRaw (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:568:30)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:44614)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:45058)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46278)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.user.upsert()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async _biLrvfKYEuldmCAP8Cnv9oesdLvKojm4B_DuXezew (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1112135) {
+  code: 'P1010',
+  meta: {
+    modelName: 'User',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:684:68
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.startTransaction (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:684:18)
+        at async #r (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:61701)
+        at async qt.startInternalTransaction (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:60664)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46009)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[unhandledRejection] PrismaClientKnownRequestError: 
+Invalid `prisma.aPIToken.updateMany()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+    at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+    at async _Z575Odfg0mWigQh2XOxb9E_51Deh6hWbkBzPXkSiIB4 (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1195939) {
+  code: 'P1010',
+  meta: {
+    modelName: 'APIToken',
+    driverAdapterError: DriverAdapterError: DatabaseAccessDenied
+        at PrismaPgAdapter.onError (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:642:11)
+        at file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:684:68
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async PrismaPgAdapter.startTransaction (file:///workspace/drop/server/.output/server/node_modules/@prisma/adapter-pg/dist/index.mjs:684:18)
+        at async #r (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:61701)
+        at async qt.startInternalTransaction (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:60664)
+        at async e.interpretNode (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:46009)
+        at async e.run (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:11:43328)
+        at async e.execute (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:57:815)
+        at async jt.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:58:2399) {
+      cause: [Object]
+    }
+  },
+  clientVersion: '7.7.0'
+}
+[07:15:36.946] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:15:36.969] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:15:37.060] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:15:37.064] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:15:37.077] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[07:15:37.345] ERROR (service-nginx/108869): 2026/06/24 07:15:36 [emerg] 108887#108887: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:37.845] ERROR (service-nginx/108869): 2026/06/24 07:15:36 [emerg] 108887#108887: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:38.345] ERROR (service-nginx/108869): 2026/06/24 07:15:36 [emerg] 108887#108887: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:38.845] ERROR (service-nginx/108869): 2026/06/24 07:15:36 [emerg] 108887#108887: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:39.345] ERROR (service-nginx/108869): 2026/06/24 07:15:36 [emerg] 108887#108887: still could not bind()
+[07:15:39.346] WARN (service-nginx/108869): service exited with code 1 (null), restarting...
+[07:15:42.080] INFO (108869): torrential detected in development mode - building from source
+[07:15:42.083] INFO (service-torrential/108869): service launched
+[07:15:42.084] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:42.189] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:15:42.218] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:15:42.309] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:15:42.313] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:15:42.325] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[07:15:43.850] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:44.350] INFO (service-nginx/108869): service launched
+[07:15:44.357] ERROR (service-nginx/108869): 2026/06/24 07:15:44 [emerg] 109534#109534: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:44.857] ERROR (service-nginx/108869): 2026/06/24 07:15:44 [emerg] 109534#109534: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:45.357] ERROR (service-nginx/108869): 2026/06/24 07:15:44 [emerg] 109534#109534: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:45.857] ERROR (service-nginx/108869): 2026/06/24 07:15:44 [emerg] 109534#109534: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:46.357] ERROR (service-nginx/108869): 2026/06/24 07:15:44 [emerg] 109534#109534: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:46.857] ERROR (service-nginx/108869): 2026/06/24 07:15:44 [emerg] 109534#109534: still could not bind()
+[07:15:46.857] WARN (service-nginx/108869): service exited with code 1 (null), restarting...
+[07:15:47.326] INFO (108869): torrential detected in development mode - building from source
+[07:15:47.329] INFO (service-torrential/108869): service launched
+[07:15:47.329] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:47.434] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:15:47.462] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:15:47.553] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:15:47.557] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:15:47.570] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[07:15:49.085] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:50.852] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:51.861] INFO (service-nginx/108869): service launched
+[07:15:51.867] ERROR (service-nginx/108869): 2026/06/24 07:15:51 [emerg] 109961#109961: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:52.367] ERROR (service-nginx/108869): 2026/06/24 07:15:51 [emerg] 109961#109961: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:52.571] INFO (108869): torrential detected in development mode - building from source
+[07:15:52.573] INFO (service-torrential/108869): service launched
+[07:15:52.573] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:52.677] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:15:52.705] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:15:52.796] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:15:52.799] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:15:52.813] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[07:15:52.867] ERROR (service-nginx/108869): 2026/06/24 07:15:51 [emerg] 109961#109961: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:53.367] ERROR (service-nginx/108869): 2026/06/24 07:15:51 [emerg] 109961#109961: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:53.867] ERROR (service-nginx/108869): 2026/06/24 07:15:51 [emerg] 109961#109961: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:54.330] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:54.367] ERROR (service-nginx/108869): 2026/06/24 07:15:51 [emerg] 109961#109961: still could not bind()
+[07:15:54.368] WARN (service-nginx/108869): service exited with code 1 (null), restarting...
+[07:15:56.087] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[Vue Router warn]: No match found for location with path "/docs"
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[07:15:57.813] INFO (108869): torrential detected in development mode - building from source
+[07:15:57.816] INFO (service-torrential/108869): service launched
+[07:15:57.816] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:57.852] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:57.920] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:15:57.948] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:15:58.042] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:15:58.045] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:15:58.058] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[request error] [unhandled] [GET] https://cbbd415cf4ee4e3da5c70d92736c7429--3000.ap-shanghai2.cloudstudio.club/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[request error] [unhandled] [GET] https://cbbd415cf4ee4e3da5c70d92736c7429--3000.ap-shanghai2.cloudstudio.club/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[07:15:59.372] INFO (service-nginx/108869): service launched
+[07:15:59.378] ERROR (service-nginx/108869): 2026/06/24 07:15:59 [emerg] 110589#110589: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:15:59.574] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:15:59.898] ERROR (service-nginx/108869): 2026/06/24 07:15:59 [emerg] 110589#110589: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[Vue Router warn]: No match found for location with path "/docs"
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[request error] [unhandled] [GET] http://localhost/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225 {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[07:16:00.378] ERROR (service-nginx/108869): 2026/06/24 07:15:59 [emerg] 110589#110589: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:16:00.878] ERROR (service-nginx/108869): 2026/06/24 07:15:59 [emerg] 110589#110589: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[request error] [unhandled] [GET] https://cbbd415cf4ee4e3da5c70d92736c7429--3000.ap-shanghai2.cloudstudio.club/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[07:16:01.332] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:01.378] ERROR (service-nginx/108869): 2026/06/24 07:15:59 [emerg] 110589#110589: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[request error] [unhandled] [GET] https://cbbd415cf4ee4e3da5c70d92736c7429--3000.ap-shanghai2.cloudstudio.club/api/v1
+ PrismaClientKnownRequestError: 
+Invalid `prisma.applicationSettings.count()` invocation:
+
+
+User was denied access on the database `(not available)`
+    at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+    ... 8 lines matching cause stack trace ...
+    at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+  cause: PrismaClientKnownRequestError: 
+  Invalid `prisma.applicationSettings.count()` invocation:
+  
+  
+  User was denied access on the database `(not available)`
+      at Gr.handleRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:8286)
+      at Gr.handleAndLogRequestError (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7581)
+      at Gr.request (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:65:7288)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async a (/workspace/drop/server/.output/server/node_modules/@prisma/client/runtime/client.js:75:6730)
+      at async Object.init (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1114701)
+      at async Object.get (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:1115399)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/routes/api/index.get.mjs:1:1177)
+      at async Object.handler (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:96212)
+      at async Server.<anonymous> (file:///workspace/drop/server/.output/server/chunks/nitro/nitro.mjs:1:99225) {
+    code: 'P1010',
+    meta: {
+      modelName: 'ApplicationSettings',
+      driverAdapterError: [DriverAdapterError]
+    },
+    clientVersion: '7.7.0'
+  },
+  statusCode: 500,
+  fatal: false,
+  unhandled: true,
+  statusMessage: undefined,
+  data: undefined
+}
+[07:16:01.878] ERROR (service-nginx/108869): 2026/06/24 07:15:59 [emerg] 110589#110589: still could not bind()
+[07:16:01.879] WARN (service-nginx/108869): service exited with code 1 (null), restarting...
+[07:16:03.059] INFO (108869): torrential detected in development mode - building from source
+[07:16:03.063] INFO (service-torrential/108869): service launched
+[07:16:03.063] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:03.087] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:03.168] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:16:03.196] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:16:03.287] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:16:03.290] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:16:03.303] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[07:16:04.818] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:04.852] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:06.576] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:06.882] INFO (service-nginx/108869): service launched
+[07:16:06.889] ERROR (service-nginx/108869): 2026/06/24 07:16:06 [emerg] 110987#110987: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:16:07.389] ERROR (service-nginx/108869): 2026/06/24 07:16:06 [emerg] 110987#110987: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:16:07.889] ERROR (service-nginx/108869): 2026/06/24 07:16:06 [emerg] 110987#110987: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:16:08.304] INFO (108869): torrential detected in development mode - building from source
+[07:16:08.306] INFO (service-torrential/108869): service launched
+[07:16:08.307] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:08.332] WARN (service-torrential/108869): failed setup, trying again... | Error: connect ECONNREFUSED 127.0.0.1:33148
+[07:16:08.389] ERROR (service-nginx/108869): 2026/06/24 07:16:06 [emerg] 110987#110987: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+[07:16:08.412] ERROR (service-torrential/108869):    Compiling droplet-rs v0.16.3 (/workspace/drop/libraries/droplet)
+[07:16:08.439] ERROR (service-torrential/108869): error[E0554]: `#![feature]` may not be used on the stable release channel
+ --> /workspace/drop/libraries/droplet/src/lib.rs:2:1
+  |
+2 | #![feature(impl_trait_in_bindings)]
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[07:16:08.531] ERROR (service-torrential/108869): For more information about this error, try `rustc --explain E0554`.
+[07:16:08.535] ERROR (service-torrential/108869): error: could not compile `droplet-rs` (lib) due to 1 previous error
+[07:16:08.549] WARN (service-torrential/108869): service exited with code 101 (null), restarting...
+[07:16:08.890] ERROR (service-nginx/108869): 2026/06/24 07:16:06 [emerg] 110987#110987: bind() to 0.0.0.0:3000 failed (98: Address already in use)
